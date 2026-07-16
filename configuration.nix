@@ -26,6 +26,8 @@
 
   services.libinput.enable = true;
 
+  security.pam.services.swaylock = {};
+
   users.users.scorpio= {
     isNormalUser = true;
     extraGroups = [ "wheel" ];

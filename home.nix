@@ -6,7 +6,7 @@ let
     owner = "AngelJumbo";
     repo = "gruvbox-wallpapers";
     rev = "main";
-    sha256 = "0y10yd8lr4aj820cz7d2a3scy1ml8qrf9dg70vss7apglz8sgr1k";
+    sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   niri-dot-configs = {
@@ -102,12 +102,20 @@ in
     })
     niri-dot-configs;
 
+  home.file = {
+    "Pictures/wallpapers" = {
+      source = create_symlink "${gruvbox-wallpapers}/wallpapers";
+      recursive = true;
+    };
+  };
+
   home.packages = with pkgs; [
     fastfetch
     waybar
     waypaper
     quickshell
     swaylock
+    swaybg
     wezterm
     oh-my-posh
     git
