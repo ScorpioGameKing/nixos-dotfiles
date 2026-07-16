@@ -71,7 +71,7 @@ in
   ];
   # ---------------------------
 
-  television.enable = true;
+  television.enable = false;
   bash.enable = true;
   eza.enable = true;
   
