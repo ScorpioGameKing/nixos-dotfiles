@@ -19,8 +19,8 @@ let
   niri-dotfiles-repo = pkgs.fetchFromGitHub {
     owner = "ScorpioGameKing";
     repo = "Niri-Dotfiles";
-    rev = "master";
-    sha256 = "sha256-Rj0LIfAqnHultrtGnBpeKWXKwiwPkt86lkqV2I02oiM=";
+    rev = "313a30c8cebacce8b5c3913ef8abed897eeb7ecf"; #master
+    sha256 = "0sp1iivyia1k6i87gdyxqs70p43m12wjdhaz6bf1ls2c8c4bmv3a";
   };
   niri-dot-configs = {
     niri = "niri";
@@ -32,6 +32,7 @@ let
     quickshell = "quickshell";
     swaylock = "swaylock";
     fuzzel = "fuzzel";
+    yeet = "yeet";
   };
 in
 # ---------------------------
@@ -66,6 +67,7 @@ in
     fuzzel
     nix-search-tv
     television
+    update-nix-fetchgit
   ];
   # ---------------------------
 
@@ -109,12 +111,20 @@ in
   programs.bash = {
     enable = true;
     shellAliases = {
+      
+      # General Shorthands
 	    btw = "echo I use NixOS, btw";
       ff = "clear && fastfetch";
       ls = "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
       vi = "nvim";
-      quick-rebuild-nixbox = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
+
+      # General NixOS Commands
       quick-clean = "nix-collect-garbage -d";
+      quick-fetchgit-update = "update-nix-fetchgit --verbose --only-commented";
+      
+      # Nix-Box Build Commands
+      quick-rebuild-nixbox = "quick-fetchgit-update ~/nixos-dotfiles/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
+      full-rebuild-nixbox = "quick-clean && quick-fetchgit-update ~/nixos-dotfiles/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
     };
     initExtra = ''
       ff
@@ -122,7 +132,11 @@ in
   };
 
   programs.wezterm.enable = true;
-  programs.oh-my-posh.enable = true;
+  programs.oh-my-posh = {
+    enable = true;
+    enableBashIntegration = true;
+    useTheme = "gruvbox";
+  };
   programs.lazygit.enable = true;
 
   programs.nix-search-tv = {
