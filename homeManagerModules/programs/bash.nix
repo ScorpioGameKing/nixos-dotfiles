@@ -20,7 +20,7 @@
         qnfgh = "update-nix-fetchgit --verbose --only-commented ~/nixos-dotfiles/hosts/nix-box/home.nix";
         
         # Nix-Box Build Commands
-        qnrbs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
+        qnrb = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
         qnrbf = "qnc && qnfgh && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
       };
       initExtra = ''

@@ -66,7 +66,7 @@ in
     yazi
     fuzzel
     nix-search-tv
-    television
+    #television
     update-nix-fetchgit
     vscodium
   ];
