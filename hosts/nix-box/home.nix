@@ -66,11 +66,14 @@ in
     yazi
     fuzzel
     nix-search-tv
-    #television
     update-nix-fetchgit
     vscodium
   ];
   # ---------------------------
+
+  television.enable = true;
+  bash.enable = true;
+  eza.enable = true;
   
   # ---------------------------
   # Import Modules

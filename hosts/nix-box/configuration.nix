@@ -38,7 +38,7 @@
     nodejs       # We have this here for neovim plugins(?)
     ripgrep      # Grep go BRRRRRR
     tree-sitter  # I like syntax-highlighting anywhere possible
-    eza          # Better ls
+    #eza          # Better ls
     zoxide       # Better cd
     fzf          # Fuzzy find files in the terminal
     pinentry-all # Current Solution to sign with git

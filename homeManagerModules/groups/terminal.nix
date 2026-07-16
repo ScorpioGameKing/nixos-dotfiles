@@ -14,6 +14,4 @@
     ./../programs/wezterm.nix
     ./../programs/yazi.nix
   ];
-  bash.enable = true;
-  television.enable = false;
 }
