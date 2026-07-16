@@ -70,6 +70,13 @@ in
     update-nix-fetchgit
   ];
   # ---------------------------
+  
+  # ---------------------------
+  #
+  # ---------------------------
+  imports = [
+    .homeManagerModules/nix-search-tv.nix
+  ];
 
   # ---------------------------
   # Enable gpg and configure gpg
@@ -139,6 +146,7 @@ in
   };
   programs.lazygit.enable = true;
 
+  /*
   programs.nix-search-tv = {
     enable = true;
     enableTelevisionIntegration = true;
@@ -150,6 +158,7 @@ in
       ];
     };
   };
+  */
 
   programs.television = {
     enable = true;
