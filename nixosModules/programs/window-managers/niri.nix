@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, config, ... }: {
 
   options = {
     niri.enable = lib.mkEnableOption "enables niri";
