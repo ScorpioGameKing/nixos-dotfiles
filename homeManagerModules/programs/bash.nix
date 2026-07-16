@@ -14,8 +14,8 @@
       quick-fetchgit-update = "update-nix-fetchgit --verbose --only-commented";
       
       # Nix-Box Build Commands
-      quick-rebuild-nixbox = "quick-fetchgit-update ~/nixos-dotfiles/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
-      full-rebuild-nixbox = "quick-clean && quick-fetchgit-update ~/nixos-dotfiles/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
+      quick-rebuild-nixbox = "quick-fetchgit-update ~/nixos-dotfiles/nix-box/hosts/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
+      full-rebuild-nixbox = "quick-clean && quick-fetchgit-update ~/nixos-dotfiles/nix-box/hosts/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
     };
     initExtra = ''
       ff
