@@ -1,5 +1,13 @@
+# -------------------------
+# Nix-Box Base Flake 
+# -------------------------
 {
-  description = "NixOS from Scratch";
+  description = "Scorpio's First Nix-Box";
+
+  # -------------------------
+  # Setup our Packages, Home
+  # Manager and Stylix repos
+  # -------------------------
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
     stylix = {
@@ -11,7 +19,14 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
+  # -------------------------
+  
+  # -------------------------
+  # Pass Repositories into
+  # the the configuration
+  # along with a basic Home 
+  # Manager setup.
+  # -------------------------
   outputs = { self, nixpkgs, stylix, home-manager, ... }: {
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
@@ -30,4 +45,6 @@
       ];
 	  };
   };
+  # -------------------------
 }
+# -------------------------

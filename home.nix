@@ -5,6 +5,8 @@
 
 # ---------------------------
 # Define shorthand variables
+# for functions and fetched
+# packages/resources.
 # ---------------------------
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
@@ -14,7 +16,12 @@ let
     rev = "main";
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
-  niri-dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/nix-box/configs/Niri-Dotfiles/.config";
+  niri-dotfiles-repo = pkgs.fetchFromGitHub {
+    owner = "ScorpioGameKing";
+    repo = "Niri-Dotfiles";
+    rev = "master";
+    sha256 = "sha256-Rj0LIfAqnHultrtGnBpeKWXKwiwPkt86lkqV2I02oiM=";
+  };
   niri-dot-configs = {
     niri = "niri";
     nvim = "nvim";
@@ -75,11 +82,11 @@ in
   # ---------------------------
 
   # ---------------------------
-  # Source Enabled Configs
+  # Source Niri Enabled Configs
   # ---------------------------
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
-      source = create_symlink "${niri-dotfiles}/${subpath}";
+      source = create_symlink "${niri-dotfiles-repo}/.config/${subpath}";
       recursive = true;
     })
     niri-dot-configs;
@@ -174,6 +181,5 @@ in
     enableBashIntegration = true;
   };
   # ---------------------------
-
 }
 # ---------------------------
