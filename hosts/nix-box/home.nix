@@ -76,7 +76,7 @@ in
   # Import Modules
   # ---------------------------
   imports = [
-    ./homeManagerModules/groups/terminal.nix
+    ./../../homeManagerModules/groups/terminal.nix
   ];
 
   # ---------------------------

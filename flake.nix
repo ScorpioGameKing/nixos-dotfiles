@@ -28,17 +28,22 @@
   # Manager setup.
   # -------------------------
   outputs = { self, nixpkgs, stylix, home-manager, ... }: {
+
+    # -------------------------
+    # Nix-Box Flake: Niri based
+    # configs for my laptop.
+    # -------------------------
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
 	    modules = [
         stylix.nixosModules.stylix
-	      ./configuration.nix
+	      ./hosts/nix-box/configuration.nix
 		    home-manager.nixosModules.home-manager
 		    {
 		      home-manager = {
 		        useGlobalPkgs = true;
 			      useUserPackages = true;
-			      users.scorpio = import ./home.nix;
+			      users.scorpio = import ./hosts/nix-box/home.nix;
 			      backupFileExtension = "backup";
 		      };
 		    }
