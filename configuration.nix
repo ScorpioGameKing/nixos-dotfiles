@@ -36,6 +36,7 @@
     zoxide       # Better cd
     fzf          # Fuzzy find files in the terminal
     pinentry-all # Current Solution to sign with git
+    xwayland-satellite
   ];
   # -------------------------
 
