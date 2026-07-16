@@ -41,7 +41,8 @@
   # -------------------------
 
   # -------------------------
-  # Set up the system-wide font, Agave is nice.
+  # Set up the system-wide font
+  # Agave is a nice default.
   # -------------------------
   fonts.packages = with pkgs; [
     nerd-fonts.agave

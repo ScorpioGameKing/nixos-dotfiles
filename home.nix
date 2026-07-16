@@ -59,6 +59,8 @@ in
     brave
     yazi
     fuzzel
+    nix-search-tv
+    television
   ];
   # ---------------------------
 
@@ -120,6 +122,23 @@ in
   programs.oh-my-posh.enable = true;
   programs.lazygit.enable = true;
 
+  programs.nix-search-tv = {
+    enable = true;
+    enableTelevisionIntegration = true;
+    settings = {
+      indexes = [
+        "nixpkgs"
+        "home-manager"
+        "nixos"
+      ];
+    };
+  };
+
+  programs.television = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   programs.eza = {
     enable = true;
     enableBashIntegration = true;
@@ -155,6 +174,9 @@ in
       user = {
         name = "ScorpioGameKing";
         email = "scorpiogameking@gmail.com";
+      };
+      ui = {
+        editor = "nvim";
       };
     };
   };
