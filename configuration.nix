@@ -1,33 +1,29 @@
 # -------------------------
-# {{{ Scorpio's Nix-Box Configs
+# Scorpio's Nix-Box Configs
 # -------------------------
 
 { config, lib, pkgs, ... }:
 
 {
   # -------------------------
-  # {{{ Nix Settings
+  # Nix Settings
   # -------------------------
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
   # -------------------------
-  # }}}
-  # -------------------------
 
   # -------------------------
-  # {{{ Flake imports
+  # Flake imports
   # -------------------------
   imports =
     [ 
       ./hardware-configuration.nix
     ];
   # -------------------------
-  # }}}
-  # -------------------------
 
   # -------------------------
-  # {{{ System Wide Package Installs
+  # System Wide Package Installs
   # -------------------------
   environment.systemPackages = with pkgs; [
     wget         # 
@@ -42,21 +38,17 @@
     pinentry-all # Current Solution to sign with git
   ];
   # -------------------------
-  # }}}
-  # -------------------------
 
   # -------------------------
-  # {{{ Set up the system-wide font, Agave is nice.
+  # Set up the system-wide font, Agave is nice.
   # -------------------------
   fonts.packages = with pkgs; [
     nerd-fonts.agave
   ];
   # -------------------------
-  # }}}
-  # -------------------------
  
   # -------------------------
-  # {{{ System Config Options
+  # System Config Options
   # -------------------------
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -76,11 +68,9 @@
 
   time.timeZone = "America/New_York";
   # -------------------------
-  # }}}
-  # -------------------------
 
   # -------------------------
-  # {{{ Create our user
+  # Create our user
   # -------------------------
   users.users.scorpio= {
     isNormalUser = true;
@@ -90,11 +80,9 @@
     ];
   };
   # -------------------------
-  # }}}
-  # -------------------------
 
   # -------------------------
-  # {{{ Enable packages at system level
+  # Enable packages at system level
   # -------------------------
   programs.niri = {
     enable = true;
@@ -109,9 +97,5 @@
     ];
   };
   # -------------------------
-  # }}}
-  # -------------------------
 }
-# -------------------------
-# }}}
 # -------------------------

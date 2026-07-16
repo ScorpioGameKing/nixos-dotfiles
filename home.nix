@@ -1,14 +1,20 @@
+# ---------------------------
+# Scorpio's Nix-Box HM Config
+# ---------------------------
 { config, pkgs, ... }:
 
+# ---------------------------
+# Define shorthand variables
+# ---------------------------
 let
-  niri-dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/nix-box/configs/Niri-Dotfiles/.config";
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   gruvbox-wallpapers = pkgs.fetchFromGitHub {
     owner = "AngelJumbo";
     repo = "gruvbox-wallpapers";
     rev = "main";
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
-  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  niri-dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/nix-box/configs/Niri-Dotfiles/.config";
   niri-dot-configs = {
     niri = "niri";
     nvim = "nvim";
@@ -21,12 +27,78 @@ let
     fuzzel = "fuzzel";
   };
 in
+# ---------------------------
 
 {
+  # ---------------------------
+  # Home Manager Options
+  # ---------------------------
   home.username = "scorpio";
   home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
+  # ---------------------------
 
+  # ---------------------------
+  # User Packages
+  # ---------------------------
+  home.packages = with pkgs; [
+    fastfetch
+    waybar
+    waypaper
+    quickshell
+    swaylock
+    swaybg
+    wezterm
+    oh-my-posh
+    git
+    lazygit
+    jujutsu
+    lazyjj
+    gh
+    neovim
+    brave
+    yazi
+    fuzzel
+  ];
+  # ---------------------------
+
+  # ---------------------------
+  # Enable gpg and configure gpg
+  # for github, lazygit, jujutsu
+  # and lazyjj
+  # ---------------------------
+  programs.gpg.enable = true;
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-all;
+  };
+  # ---------------------------
+
+  # ---------------------------
+  # Source Enabled Configs
+  # ---------------------------
+  xdg.configFile = builtins.mapAttrs 
+    (name: subpath: {
+      source = create_symlink "${niri-dotfiles}/${subpath}";
+      recursive = true;
+    })
+    niri-dot-configs;
+  # ---------------------------
+
+  # ---------------------------
+  # Source User Files
+  # ---------------------------
+  home.file = {
+    "Pictures/wallpapers" = {
+      source = create_symlink "${gruvbox-wallpapers}/wallpapers";
+      recursive = true;
+    };
+  };
+  # ---------------------------
+
+  # ---------------------------
+  # Configure User Programs
+  # ---------------------------
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -45,6 +117,8 @@ in
   };
 
   programs.wezterm.enable = true;
+  programs.oh-my-posh.enable = true;
+  programs.lazygit.enable = true;
 
   programs.eza = {
     enable = true;
@@ -65,8 +139,6 @@ in
     enableBashIntegration = true;
   };
 
-  programs.oh-my-posh.enable = true;
-
   programs.git = {
     enable = true;
     userName = "ScorpioGameKing";
@@ -77,13 +149,13 @@ in
     };
   };
   
-  programs.gpg.enable = true;
-  services.gpg-agent = {
+  programs.jujutsu = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-all;
+    settings = {
+      name = "ScorpioGameKing";
+      email = "scorpiogameking@gmail.com";
+    };
   };
-  programs.lazygit.enable = true;
-  programs.jujutsu.enable = true;
 
   programs.gh = {
     enable = true;
@@ -94,38 +166,7 @@ in
     enable = true;
     enableBashIntegration = true;
   };
+  # ---------------------------
 
-  xdg.configFile = builtins.mapAttrs 
-    (name: subpath: {
-      source = create_symlink "${niri-dotfiles}/${subpath}";
-      recursive = true;
-    })
-    niri-dot-configs;
-
-  home.file = {
-    "Pictures/wallpapers" = {
-      source = create_symlink "${gruvbox-wallpapers}/wallpapers";
-      recursive = true;
-    };
-  };
-
-  home.packages = with pkgs; [
-    fastfetch
-    waybar
-    waypaper
-    quickshell
-    swaylock
-    swaybg
-    wezterm
-    oh-my-posh
-    git
-    lazygit
-    jujutsu
-    lazyjj
-    gh
-    neovim
-    brave
-    yazi
-    fuzzel
-  ];
 }
+# ---------------------------
