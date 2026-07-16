@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
   options = {
     television.enable = lib.mkEnableOption "enables television";
   };
