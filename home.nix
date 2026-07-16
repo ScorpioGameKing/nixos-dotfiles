@@ -72,23 +72,11 @@ in
   # ---------------------------
   
   # ---------------------------
-  #
+  # Import Modules
   # ---------------------------
   imports = [
     ./homeManagerModules/groups/terminal.nix
   ];
-
-  # ---------------------------
-  # Enable gpg and configure gpg
-  # for github, lazygit, jujutsu
-  # and lazyjj
-  # ---------------------------
-  programs.gpg.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-all;
-  };
-  # ---------------------------
 
   # ---------------------------
   # Source Niri Enabled Configs
@@ -115,28 +103,6 @@ in
   # ---------------------------
   # Configure User Programs
   # ---------------------------
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      
-      # General Shorthands
-	    btw = "echo I use NixOS, btw";
-      ff = "clear && fastfetch";
-      ls = "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
-      vi = "nvim";
-
-      # General NixOS Commands
-      quick-clean = "nix-collect-garbage -d";
-      quick-fetchgit-update = "update-nix-fetchgit --verbose --only-commented";
-      
-      # Nix-Box Build Commands
-      quick-rebuild-nixbox = "quick-fetchgit-update ~/nixos-dotfiles/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
-      full-rebuild-nixbox = "quick-clean && quick-fetchgit-update ~/nixos-dotfiles/nix-box/home.nix && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
-    };
-    initExtra = ''
-      ff
-    '';
-  };
 
   programs.wezterm.enable = true;
   programs.oh-my-posh = {
