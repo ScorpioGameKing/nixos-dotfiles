@@ -3,7 +3,7 @@
     eza.enable = lib.mkEnableOption "enables eza";
   };
   config = lib.mkIf config.eza.enable {
-    enviroment.systemPackages = with pkgs; [
+    home.packages = with pkgs; [
       eza
     ];
     programs.eza = {
