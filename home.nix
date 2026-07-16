@@ -146,25 +146,6 @@ in
   };
   programs.lazygit.enable = true;
 
-  /*
-  programs.nix-search-tv = {
-    enable = true;
-    enableTelevisionIntegration = true;
-    settings = {
-      indexes = [
-        "nixpkgs"
-        "home-manager"
-        "nixos"
-      ];
-    };
-  };
-  */
-
-  programs.television = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
   programs.eza = {
     enable = true;
     enableBashIntegration = true;
