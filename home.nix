@@ -75,7 +75,7 @@ in
   #
   # ---------------------------
   imports = [
-    .homeManagerModules/nix-search-tv.nix
+    ./homeManagerModules/groups/terminal.nix
   ];
 
   # ---------------------------
