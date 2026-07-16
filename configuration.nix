@@ -19,6 +19,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./nixosModules/groups/theme.nix
     ];
   # -------------------------
 
@@ -39,24 +40,6 @@
     xwayland-satellite
   ];
   # -------------------------
-
-  # -------------------------
-  # Set up the system-wide font
-  # Agave is a nice default.
-  # -------------------------
-  fonts.packages = with pkgs; [
-    nerd-fonts.agave
-  ];
-  # -------------------------
-  
-  # -------------------------
-  # Stylix Settings
-  # -------------------------
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    autoEnable = true;
-  };
  
   # -------------------------
   # System Config Options
