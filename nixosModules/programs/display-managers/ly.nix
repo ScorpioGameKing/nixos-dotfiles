@@ -4,7 +4,7 @@
     ly.enable = lib.mkEnableOption "enables ly";
   };
   
-  config = mkIf config.ly.enable {
+  config = lib.mkIf config.ly.enable {
     services.displayManager.ly.enable = true;
   };
 }
