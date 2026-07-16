@@ -1,6 +1,7 @@
 # ---------------------------
 # Scorpio's Nix-Box HM Config
 # ---------------------------
+
 { config, pkgs, ... }:
 
 # ---------------------------
@@ -8,6 +9,7 @@
 # for functions and fetched
 # packages/resources.
 # ---------------------------
+
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   gruvbox-wallpapers = pkgs.fetchFromGitHub {
@@ -16,6 +18,7 @@ let
     rev = "main";
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
+  # Rev comment for targeted updates. ^^^ is huge and takes forever
   niri-dotfiles-repo = pkgs.fetchFromGitHub {
     owner = "ScorpioGameKing";
     repo = "Niri-Dotfiles";
@@ -35,20 +38,20 @@ let
     yeet = "yeet";
   };
 in
-# ---------------------------
 
 {
   # ---------------------------
   # Home Manager Options
   # ---------------------------
+
   home.username = "scorpio";
   home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
-  # ---------------------------
 
   # ---------------------------
   # User Packages
   # ---------------------------
+
   home.packages = with pkgs; [
     fastfetch
     waybar
@@ -62,6 +65,20 @@ in
     update-nix-fetchgit
     vscodium
   ];
+
+  # ---------------------------
+  # Import Modules
+  # ---------------------------
+
+  imports = [
+    ./../../homeManagerModules/groups/cli-apps.nix
+    ./../../homeManagerModules/groups/shells.nix
+    ./../../homeManagerModules/groups/terminals.nix
+    ./../../homeManagerModules/groups/tools.nix
+  ];
+
+  # ---------------------------
+  # Flake Configuration
   # ---------------------------
 
   bash.enable = true;
@@ -79,32 +96,24 @@ in
   zoxide.enable = true;
   
   # ---------------------------
-  # Import Modules
-  # ---------------------------
-  imports = [
-    ./../../homeManagerModules/groups/terminal.nix
-  ];
-
-  # ---------------------------
   # Source Niri Enabled Configs
   # ---------------------------
+
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
       source = create_symlink "${niri-dotfiles-repo}/.config/${subpath}";
       recursive = true;
     })
     niri-dot-configs;
-  # ---------------------------
 
   # ---------------------------
   # Source User Files
   # ---------------------------
+
   home.file = {
     "Pictures/wallpapers" = {
       source = create_symlink "${gruvbox-wallpapers}/wallpapers";
       recursive = true;
     };
   };
-  # ---------------------------
 }
-# ---------------------------

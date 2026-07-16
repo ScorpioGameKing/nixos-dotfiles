@@ -5,32 +5,35 @@
 { config, lib, pkgs, ... }:
 
 {
-  # -------------------------
-  # Nix Settings
-  # -------------------------
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "26.05";
-  # -------------------------
 
   # -------------------------
   # Flake imports
   # -------------------------
+
   imports =
     [ 
       ./hardware-configuration.nix
       ./../../nixosModules/groups/system.nix
       ./../../nixosModules/groups/users.nix
-      ./../../nixosModules/groups/dm.nix
-      ./../../nixosModules/groups/wm.nix
+      ./../../nixosModules/groups/display-managers.nix
+      ./../../nixosModules/groups/window-managers.nix
       ./../../nixosModules/groups/gui-apps.nix
       ./../../nixosModules/groups/theme.nix
     ];
-  # -------------------------
+  
+  # ---------------------------
+  # Flake Configuration
+  # ---------------------------
+
+  niri.enable = true;
+  ly.enable = true;
+  steam.enable = true;
+  nb-stylix.enable = true;
 
   # -------------------------
   # System Wide Package Installs
   # -------------------------
+
   environment.systemPackages = with pkgs; [
     wget         # 
     cmake        # Build C Stuff
@@ -41,6 +44,4 @@
     pinentry-all # Current Solution to sign with git
     xwayland-satellite
   ];
-  # -------------------------
 }
-# -------------------------

@@ -1,0 +1,8 @@
+{ pkgs, lib, ...}: {
+  imports = [
+    ./../programs/cli-apps/lazygit.nix
+    ./../programs/cli-apps/oh-my-posh.nix
+    ./../programs/cli-apps/television.nix
+    ./../programs/cli-apps/yazi.nix
+  ];
+}
