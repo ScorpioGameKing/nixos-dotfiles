@@ -100,57 +100,5 @@ in
     };
   };
   # ---------------------------
-
-  # ---------------------------
-  # Configure User Programs
-  # ---------------------------
-
-  programs.wezterm.enable = true;
-  programs.oh-my-posh = {
-    enable = true;
-    enableBashIntegration = true;
-    useTheme = "gruvbox";
-  };
-  programs.lazygit.enable = true;
-
-  programs.eza = {
-    enable = true;
-    enableBashIntegration = true;
-    icons = "auto";
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-    options = [
-      "--cmd cd"
-    ];
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "ScorpioGameKing";
-    userEmail = "scorpiogameking@gmail.com";
-    signing = {
-      key = "8BD9 FC5F 99F9 F198 660A  C5D7 A716 7E06 4502 614C";
-      signByDefault = true;
-    };
-  };
-  
-  programs.gh = {
-    enable = true;
-    gitCredentialHelper.enable = true;
-  };
-
-  programs.yazi = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-  # ---------------------------
 }
 # ---------------------------
