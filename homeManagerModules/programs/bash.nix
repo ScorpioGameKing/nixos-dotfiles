@@ -1,9 +1,13 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
+  
   options = {
     bash.enable = lib.mkEnableOption "enables bash";
   };
 
   config = lib.mkIf config.bash.enable {
+    home.packages = with pkgs; [
+      bash
+    ];
     programs.bash = {
       enable = true;
       shellAliases = {

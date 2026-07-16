@@ -1,11 +1,21 @@
-{ ... }: {
-  programs.git = {
-    enable = true;
-    userName = "ScorpioGameKing";
-    userEmail = "scorpiogameking@gmail.com";
-    signing = {
-      key = "8BD9 FC5F 99F9 F198 660A  C5D7 A716 7E06 4502 614C";
-      signByDefault = true;
+{ pkgs, lib, config, ...  }: {
+
+  options = {
+    git.enable = lib.mkEnableOption "enables git";
+  };
+
+  config = lib.mkIf config.git.enable {
+    home.packages = with pkgs; [
+      git
+    ];
+    programs.git = {
+      enable = true;
+      userName = "ScorpioGameKing";
+      userEmail = "scorpiogameking@gmail.com";
+      signing = {
+        key = "8BD9 FC5F 99F9 F198 660A  C5D7 A716 7E06 4502 614C";
+        signByDefault = true;
+      };
     };
   };
 }

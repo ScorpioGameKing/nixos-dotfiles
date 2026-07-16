@@ -56,24 +56,27 @@ in
     quickshell
     swaylock
     swaybg
-    wezterm
-    oh-my-posh
-    git
-    lazygit
-    gh
     neovim
     brave
-    yazi
     fuzzel
-    nix-search-tv
     update-nix-fetchgit
     vscodium
   ];
   # ---------------------------
 
-  television.enable = false;
   bash.enable = true;
   eza.enable = true;
+  fzf.enable = true;
+  gpg.enable = true;
+  git.enable = true;
+  gh.enable = true;
+  lazygit.enable = true;
+  nix-search-tv.enable = true;
+  oh-my-posh.enable = true;
+  television.enable = true;
+  wezterm.enable = true;
+  yazi.enable = true;
+  zoxide.enable = true;
   
   # ---------------------------
   # Import Modules
