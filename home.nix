@@ -152,8 +152,10 @@ in
   programs.jujutsu = {
     enable = true;
     settings = {
-      name = "ScorpioGameKing";
-      email = "scorpiogameking@gmail.com";
+      user = {
+        name = "ScorpioGameKing";
+        email = "scorpiogameking@gmail.com";
+      };
     };
   };
 
