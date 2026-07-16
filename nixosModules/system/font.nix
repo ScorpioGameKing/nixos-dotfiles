@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   # -------------------------
   # Set up the system-wide font
   # Agave is a nice default.
