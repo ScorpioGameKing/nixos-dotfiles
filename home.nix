@@ -52,8 +52,6 @@ in
     oh-my-posh
     git
     lazygit
-    jujutsu
-    lazyjj
     gh
     neovim
     brave
@@ -108,8 +106,6 @@ in
       ff = "clear && fastfetch";
       ls = "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
       vi = "nvim";
-      lzg = "lazygit";
-      lzj = "lazyjj";
       quick-rebuild-nixbox = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles/nix-box#nix-box";
       quick-clean = "nix-collect-garbage -d";
     };
@@ -168,19 +164,6 @@ in
     };
   };
   
-  programs.jujutsu = {
-    enable = true;
-    settings = {
-      user = {
-        name = "ScorpioGameKing";
-        email = "scorpiogameking@gmail.com";
-      };
-      ui = {
-        editor = "nvim";
-      };
-    };
-  };
-
   programs.gh = {
     enable = true;
     gitCredentialHelper.enable = true;
