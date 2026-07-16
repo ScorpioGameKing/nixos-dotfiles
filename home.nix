@@ -68,6 +68,7 @@ in
     nix-search-tv
     television
     update-nix-fetchgit
+    vscodium
   ];
   # ---------------------------
   

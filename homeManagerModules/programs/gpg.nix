@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   # ---------------------------
   # Enable gpg and configure gpg
   # for github, lazygit, jujutsu
