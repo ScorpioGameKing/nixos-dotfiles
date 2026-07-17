@@ -1,4 +1,4 @@
-{ pkgs, lib, config, niri-dot-configs...  }: {
+{ pkgs, lib, config, niri-dotfiles-repo, ...  }: {
 
   options = {
     yazi.enable = lib.mkEnableOption "enables yazi";
