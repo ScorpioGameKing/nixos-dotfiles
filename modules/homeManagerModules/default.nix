@@ -12,7 +12,6 @@
   ];
   
   options = {
-
     hm-modules.enable = lib.mkEnableOption "enables Home Manager Modules";
 
     # CLI-App Options
@@ -352,5 +351,6 @@
       default = { };
     };
 
+  };
   config = lib.mkIf config.hm-modules.enable { };
 }

@@ -25,34 +25,27 @@
   # Module Configuration
   # ---------------------------
 
-  # Shells
-  shells = {
-    bash.enable = true;
-    nushell.enable = true;
-  };
-  
-  # Terminals
-  terminals = {
-    alacritty.enable = true;
-    wezterm.enable = true;
-  };
-  
-  # Tools
-  tools = {
-    eza.enable = true;
-    fastfetch.enable = true;
-    fuzzel.enable = true;
-    fzf.enable = true;
-    gpg.enable = true;
-    git.enable = true;
-    gh.enable = true;
-    nix-search-tv.enable = true;
-    zoxide.enable = true;
-  };
-  
-  # CLI Apps
   hm-modules = {
     enable = true;
+    shells = {
+      bash.enable = true;
+      nushell.enable = true;
+    };
+    terminals = {
+      alacritty.enable = true;
+      wezterm.enable = true;
+    };
+    tools = {
+      eza.enable = true;
+      fastfetch.enable = true;
+      fuzzel.enable = true;
+      fzf.enable = true;
+      gpg.enable = true;
+      git.enable = true;
+      gh.enable = true;
+      nix-search-tv.enable = true;
+      zoxide.enable = true;
+    };
     cli-apps = {
       enable = true;
       lazygit.enable = true;
@@ -61,27 +54,21 @@
       television.enable = true;
       yazi.enable = true;
     };
-  };
-  
-  # Desktop Enviroment
-  desktop = {
-    enable = true;
-    quickshell.enable = true;
-    swaybg.enable = true;
-    swaylock.enable = true;
-    waybar.enable = true;
-    waypaper.enable = true;
-  };
-  
-  # GUI Apps
-  gui-apps = {
-    brave.enable = true;
-    equibop.enable = true;
-    vscodium.enable = true;
-  };
-
-  # Optional Resources
-  resources = {
-    gruvbox-wallpapers.enable = true;
+    desktop = {
+      enable = true;
+      quickshell.enable = true;
+      swaybg.enable = true;
+      swaylock.enable = true;
+      waybar.enable = true;
+      waypaper.enable = true;
+    };
+    gui-apps = {
+      brave.enable = true;
+      equibop.enable = true;
+      vscodium.enable = true;
+    };
+    resources = {
+      gruvbox-wallpapers.enable = true;
+    };
   };
 }
