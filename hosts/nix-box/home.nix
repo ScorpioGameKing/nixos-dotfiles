@@ -2,24 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ config, pkgs, inputs, ... }:
-
-# ---------------------------
-# Define shorthand variables
-# for functions and fetched
-# packages/resources.
-# ---------------------------
-
-let
-  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-  gruvbox-wallpapers = pkgs.fetchFromGitHub {
-    owner = "AngelJumbo";
-    repo = "gruvbox-wallpapers";
-    rev = "main";
-    sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
-  };
-  inherit (inputs) niri-dotfiles-repo;
-in
+{ ... }:
 
 {
   # ---------------------------
@@ -38,6 +21,7 @@ in
     ./../../homeManagerModules/groups/cli-apps.nix
     ./../../homeManagerModules/groups/desktop.nix
     ./../../homeManagerModules/groups/gui-apps.nix
+    ./../../homeManagerModules/groups/resources.nix
     ./../../homeManagerModules/groups/shells.nix
     ./../../homeManagerModules/groups/terminals.nix
     ./../../homeManagerModules/groups/tools.nix
@@ -87,14 +71,6 @@ in
   equibop.enable = true;
   vscodium.enable = true;
 
-  # ---------------------------
-  # Source User Files
-  # ---------------------------
-
-  home.file = {
-    "Pictures/wallpapers" = {
-      source = create_symlink "${gruvbox-wallpapers}/wallpapers";
-      recursive = true;
-    };
-  };
+  # Optional Resources
+  gruvbox-wallpapers.enable = true;
 }
