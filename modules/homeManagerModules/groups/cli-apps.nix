@@ -8,5 +8,12 @@
     ./../programs/cli-apps/television.nix
     ./../programs/cli-apps/yazi.nix
   ];
-  
+
+  options = {
+    cli-apps.enable = lib.mkEnableOption "enables cli-apps";
+  };
+
+  config = lib.mkIf config.cli-apps.enable = {
+    
+  };
 }
