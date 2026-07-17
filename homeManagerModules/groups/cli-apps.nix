@@ -2,8 +2,8 @@
 
   options = {
     cli-apps.enable = lib.mkEnableOption "enables cli-apps";
-    cli-apps.yazi = lib.mkEnableOption "enables yazi";
   };
+  
   config = lib.mkIf config.cli-apps.enable {
     imports = [
       ./../programs/cli-apps/lazygit.nix

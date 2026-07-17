@@ -79,10 +79,18 @@ in
 
   # ---------------------------
   # Flake Configuration
+  # Goal is to eventually have
+  # each group contain the 
+  # configuration options for
+  # their submodules.
   # ---------------------------
 
+  # Enable the shells group and configure packages
+  shells.enable = true;
   bash.enable = true;
 
+  # Enable the tools group and configure packages
+  tools.enable = true;
   eza.enable = true;
   fzf.enable = true;
   gpg.enable = true;
@@ -91,12 +99,13 @@ in
   nix-search-tv.enable = true;
   zoxide.enable = true;
 
+  # Enable the terminals group and configure packages
+  terminals.enable = true;
   wezterm.enable = true;
   
-  cli-apps = {
-    enable = true;
-    yazi.enable = true;
-  };
+  # Enable the clis-apps group and configure packages
+  cli-apps.enable = true;
+  yazi.enable = true;
   lazygit.enable = true;
   oh-my-posh.enable = true;
   television.enable = true;
