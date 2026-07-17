@@ -22,8 +22,8 @@ let
   niri-dotfiles-repo = pkgs.fetchFromGitHub {
     owner = "ScorpioGameKing";
     repo = "Niri-Dotfiles";
-    rev = "85993caf51860c5439f45c98195f3305d4831e81"; #master
-    sha256 = "0yii5czjmq982v4s3gfb7v2bwfl96r4mwbbg4zr7vw0gzg0h6z1z";
+    rev = "09068d3025650693fc0f5ff552a8d53049764669"; #master
+    sha256 = "0g4xs0dpqb7mn6wljh6wpbpa1r0pq1d4i4rm4zz9h9hqi4wb255b";
   };
   niri-dot-configs = {
     niri = "niri";
