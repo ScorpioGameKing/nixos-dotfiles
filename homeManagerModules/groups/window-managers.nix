@@ -2,5 +2,5 @@
   imports = [
     ./../programs/window-managers/niri.nix
   ];
-  niri.enable = lib.mkIf osConfig.niri.enable true;
+  niri-configs.enable = lib.mkIf osConfig.niri.enable true;
 }

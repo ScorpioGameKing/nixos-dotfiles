@@ -3,12 +3,13 @@
 {
 
   options = {
-    niri.enable = lib.mkEnableOption "enables niri";
+    niri-configs.enable = lib.mkEnableOption "enables niri-configs";
   };
   
-  config = lib.mkIf config.niri.enable {
-    programs.niri = {
-      enable = true;
+  config = lib.mkIf config.niri-configs.enable {
+    xdg.configFile.niri = {
+      source = create_symlink "${niri-dotfiles-repo}/.config/niri";
+      recursive = true;
     };
   };
 }
