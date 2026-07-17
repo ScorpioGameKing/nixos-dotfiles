@@ -84,6 +84,7 @@ in
   oh-my-posh.enable = true;
   television.enable = true;
   yazi.enable = false;
+  joshuto.enable = true;
   
   # Desktop Enviroment
   swaybg.enable = true;
