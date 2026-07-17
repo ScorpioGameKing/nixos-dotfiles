@@ -10,7 +10,7 @@
     ];
     programs.oh-my-posh = {
       enable = true;
-      enableBashIntegration = lib.mkIf config.bash.enable;
+      enableBashIntegration = config.bash.enable;
       useTheme = "gruvbox";
     };
   };

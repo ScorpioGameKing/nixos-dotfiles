@@ -24,7 +24,7 @@ in
     
     programs.yazi = {
       enable = true;
-      enableBashIntegration = lib.mkIf config.bash.enable;
+      enableBashIntegration = config.bash.enable;
     };
   };
 }

@@ -10,7 +10,7 @@
     ];
     programs.eza = {
       enable = true;
-      enableBashIntegration = lib.mkIf config.bash.enable;
+      enableBashIntegration = config.bash.enable;
       icons = "auto";
     };
   };
