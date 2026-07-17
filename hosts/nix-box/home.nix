@@ -27,6 +27,7 @@
 
   # Shells
   bash.enable = true;
+  nushell.enable = true;
   
   # Terminals
   alacritty.enable = true;

@@ -1,14 +1,14 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    bash.enable = lib.mkEnableOption "enables bash";
+    nushell.enable = lib.mkEnableOption "enables nushell";
   };
 
-  config = lib.mkIf config.bash.enable {
+  config = lib.mkIf config.nushell.enable {
     home.packages = with pkgs; [
-      bash
+      nushell
     ];
-    programs.bash = {
+    programs.nushell = {
       enable = true;
       shellAliases = {
         
@@ -29,7 +29,7 @@
 
       };
       
-      initExtra = ''
+      extraLogin = ''
         ff
       '';
     };
