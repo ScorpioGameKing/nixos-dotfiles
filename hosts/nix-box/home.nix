@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ config, pkgs, ... }:
+{ config, pkgs, niri-dot-configs, ... }:
 
 # ---------------------------
 # Define shorthand variables
