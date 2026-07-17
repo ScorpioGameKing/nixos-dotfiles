@@ -4,7 +4,7 @@
     #yazi.enable = lib.mkEnableOption "enables yazi";
   };
 
-  config = lib.mkIf config.cli-apps.yazi.enable {
+  config = lib.mkIf config.cli-apps.yazi {
     home.packages = with pkgs; [
       yazi
     ];
