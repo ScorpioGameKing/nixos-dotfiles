@@ -109,7 +109,7 @@ in
 
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
-      source = create_symlink "${inputs.niri-dots}/.config/${subpath}";
+      source = create_symlink "${self.inputs.niri-dots}/.config/${subpath}";
       recursive = true;
     })
     niri-dot-configs;
