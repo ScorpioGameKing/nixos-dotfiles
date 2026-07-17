@@ -183,7 +183,6 @@
       },
       "original": {
         "owner": "ScorpioGameKing",
-        "ref": "master",
         "repo": "Niri-Dotfiles",
         "type": "github"
       }
