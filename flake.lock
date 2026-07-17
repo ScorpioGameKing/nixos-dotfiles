@@ -139,16 +139,22 @@
       }
     },
     "gruvbox-wallpapers": {
-      "flake": false,
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
       "locked": {
-        "path": "github:AngelJumbo:gruvbox-wallpapers",
-        "type": "path"
+        "lastModified": 1783604638,
+        "narHash": "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=",
+        "owner": "AngelJumbo",
+        "repo": "gruvbox-wallpapers",
+        "rev": "6ee608c2e82529cd186af9f58697690dfd73fd61",
+        "type": "github"
       },
       "original": {
-        "path": "github:AngelJumbo:gruvbox-wallpapers",
-        "type": "path"
-      },
-      "parent": []
+        "owner": "AngelJumbo",
+        "repo": "gruvbox-wallpapers",
+        "type": "github"
+      }
     },
     "home-manager": {
       "inputs": {
@@ -174,16 +180,36 @@
     "niri-dotfiles-repo": {
       "flake": false,
       "locked": {
-        "path": "github:ScorpioGameKing:Niri-Dotfiles",
-        "type": "path"
+        "lastModified": 1784219769,
+        "narHash": "sha256-auy6CENMaBrcMl/BJrkIdZALjsbdt3dQNDOo6HeM4Wo=",
+        "owner": "ScorpioGameKing",
+        "repo": "Niri-Dotfiles",
+        "rev": "313a30c8cebacce8b5c3913ef8abed897eeb7ecf",
+        "type": "github"
       },
       "original": {
-        "path": "github:ScorpioGameKing:Niri-Dotfiles",
-        "type": "path"
-      },
-      "parent": []
+        "owner": "ScorpioGameKing",
+        "repo": "Niri-Dotfiles",
+        "type": "github"
+      }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1761907660,
+        "narHash": "sha256-kJ8lIZsiPOmbkJypG+B5sReDXSD1KGu2VEPNqhRa/ew=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2fb006b87f04c4d3bdf08cfdbc7fab9c13d94a15",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1784011430,
         "narHash": "sha256-LX2eBS9gFbXL5xUNBwp5mZ0tjnNvgiXoDnhz3ee1LzY=",
@@ -227,7 +253,7 @@
         "gruvbox-wallpapers": "gruvbox-wallpapers",
         "home-manager": "home-manager",
         "niri-dotfiles-repo": "niri-dotfiles-repo",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "stylix": "stylix"
       }
     },
