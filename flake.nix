@@ -45,7 +45,7 @@
     # -------------------------
 
     niri-dots = "${inputs.niri-dots}";
-    nixpkgs = "${inputs.nixpkgs}"
+    nixpkgs = "${inputs.nixpkgs}";
 
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
