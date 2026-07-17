@@ -23,10 +23,10 @@
     gruvbox-wallpapers = {
       url = "github:AngelJumbo/gruvbox-wallpapers";
     };
-    #niri-dotfiles-repo = {
-    #  url = "github:ScorpioGameKing/Niri-Dotfiles/master";
-    #  flake = false;
-    #};
+    niri-dotfiles-repo = {
+      url = "github:ScorpioGameKing/Niri-Dotfiles/master";
+      flake = false;
+    };
   };
   
   # -------------------------
@@ -36,13 +36,13 @@
   # Manager setup.
   # -------------------------
 
-  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
+  outputs = { self, nixpkgs, stylix, niri-dotfiles-repo, home-manager, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
     # configs for my laptop.
     # -------------------------
-    
+
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
 	    modules = [
