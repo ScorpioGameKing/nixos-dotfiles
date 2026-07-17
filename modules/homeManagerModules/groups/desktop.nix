@@ -1,4 +1,4 @@
-{ pkgs, lib, ...}: {
+{ pkgs, lib, config, ...}: {
 
   imports = [
     ./../programs/desktop/mako.nix
