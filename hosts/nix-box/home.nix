@@ -19,6 +19,7 @@ let
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
   # Rev comment for targeted updates. ^^^ is huge and takes forever
+  niri-dots = "${inputs.niri-dots}";
   niri-dotfiles-repo = pkgs.fetchFromGitHub {
     owner = "ScorpioGameKing";
     repo = "Niri-Dotfiles";
@@ -107,11 +108,9 @@ in
   # Source Niri Enabled Configs
   # ---------------------------
 
-  dots = "${inputs.niri-dots}";
-
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
-      source = create_symlink "${dots}/.config/${subpath}";
+      source = create_symlink "${niri-dots}/.config/${subpath}";
       recursive = true;
     })
     niri-dot-configs;
