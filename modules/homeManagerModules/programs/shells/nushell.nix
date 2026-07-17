@@ -7,7 +7,7 @@
       nushell
     ];
     home.shell.enableNushellIntegration = true;
-    programs.bash = lib.mkIf !config.hm-modules.shells.bash.enable {
+    programs.bash = lib.mkIf config.hm-modules.shells.bash.enable {
       enable = true;
       initExtra = ''
         nu
