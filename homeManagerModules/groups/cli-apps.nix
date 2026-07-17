@@ -1,5 +1,6 @@
 { pkgs, lib, ...}: {
   imports = [
+    ./../programs/cli-apps/joshuto.nix
     ./../programs/cli-apps/lazygit.nix
     ./../programs/cli-apps/neovim.nix
     ./../programs/cli-apps/oh-my-posh.nix

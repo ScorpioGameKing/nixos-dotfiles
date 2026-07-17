@@ -26,7 +26,6 @@ let
     waybar = "waybar";
     wezterm = "wezterm";
     fastfetch = "fastfetch";
-    yazi = "yazi";
     quickshell = "quickshell";
     swaylock = "swaylock";
     fuzzel = "fuzzel";
@@ -84,7 +83,7 @@ in
   neovim.enable = true;
   oh-my-posh.enable = true;
   television.enable = true;
-  yazi.enable = true;
+  yazi.enable = false;
   
   # Desktop Enviroment
   swaybg.enable = true;
