@@ -1,5 +1,6 @@
 { pkgs, lib, ...}: {
   imports = [
+    ./../programs/desktop/mako.nix
     ./../programs/desktop/quickshell.nix
     ./../programs/desktop/swaybg.nix
     ./../programs/desktop/swaylock.nix
