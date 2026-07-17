@@ -10,6 +10,6 @@
     ];
     services.mako = {
       enable = true;
-    }
+    };
   };
 }
