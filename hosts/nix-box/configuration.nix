@@ -7,7 +7,7 @@
 {
 
   # -------------------------
-  # Flake imports
+  # Import Module Groups
   # -------------------------
 
   imports =
@@ -23,7 +23,7 @@
     ];
   
   # ---------------------------
-  # Flake Configuration
+  # Module Configuration
   # ---------------------------
 
   # Tools

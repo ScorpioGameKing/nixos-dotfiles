@@ -21,7 +21,6 @@ let
   # Rev comment for targeted updates. ^^^ is huge and takes forever
   inherit (inputs) niri-dotfiles-repo;
   niri-dot-configs = {
-    niri = "niri";
     nvim = "nvim";
     waybar = "waybar";
     wezterm = "wezterm";
@@ -43,7 +42,7 @@ in
   home.stateVersion = "26.05";
 
   # ---------------------------
-  # Import Modules
+  # Import Module Groups
   # ---------------------------
 
   imports = [
@@ -56,7 +55,7 @@ in
   ];
 
   # ---------------------------
-  # Flake Configuration
+  # Module Configuration
   # ---------------------------
 
   # Shells
@@ -83,8 +82,8 @@ in
   neovim.enable = true;
   oh-my-posh.enable = true;
   television.enable = true;
-  yazi.enable = false;
-  joshuto.enable = true;
+  yazi.enable = true;
+  joshuto.enable = false;
   
   # Desktop Enviroment
   swaybg.enable = true;
