@@ -31,7 +31,7 @@ let
     waybar = "waybar";
     wezterm = "wezterm";
     fastfetch = "fastfetch";
-    yazi = "yazi";
+    #yazi = "yazi";
     quickshell = "quickshell";
     swaylock = "swaylock";
     fuzzel = "fuzzel";
@@ -96,7 +96,7 @@ in
   television.enable = true;
   yazi.enable = true;
   
-  alacritty.enable = true;
+  alacritty.enable = false;
   wezterm.enable = true;
   
   # ---------------------------
