@@ -9,7 +9,7 @@ in
   
   options = { };
 
-  config = lib.mkIf config.tools.fastfetch.enable {
+  config = lib.mkIf config.hm-modules.tools.fastfetch.enable {
     home.packages = with pkgs; [
       fastfetch
     ];

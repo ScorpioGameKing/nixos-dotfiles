@@ -9,7 +9,7 @@ in
   
   options = { };
 
-  config = lib.mkIf config.desktop.swaylock.enable {
+  config = lib.mkIf config.hm-modules.desktop.swaylock.enable {
     home.packages = with pkgs; [
       swaylock
     ];

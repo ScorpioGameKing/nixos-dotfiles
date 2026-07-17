@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.gui-apps.equibop.enable {
+  config = lib.mkIf config.hm-modules.gui-apps.equibop.enable {
     home.packages = with pkgs; [
       equibop
     ];

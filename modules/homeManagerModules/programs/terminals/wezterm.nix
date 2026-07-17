@@ -9,7 +9,7 @@ in
 
   options = { };
 
-  config = lib.mkIf config.terminals.wezterm.enable {
+  config = lib.mkIf config.hm-modules.terminals.wezterm.enable {
     home.packages = with pkgs; [
       wezterm
     ];

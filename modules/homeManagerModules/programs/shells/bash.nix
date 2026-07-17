@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.shells.bash.enable {
+  config = lib.mkIf config.hm-modules.shells.bash.enable {
     home.packages = with pkgs; [
       bash
     ];

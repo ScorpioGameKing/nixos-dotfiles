@@ -2,7 +2,7 @@
 
   options = { };
 
-  config = lib.mkIf config.tools.gpg.enable {
+  config = lib.mkIf config.hm-modules.tools.gpg.enable {
     programs.gpg.enable = true;
     services.gpg-agent = {
       enable = true;

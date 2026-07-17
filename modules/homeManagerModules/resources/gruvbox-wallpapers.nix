@@ -9,7 +9,7 @@ in
 
   options = { };
 
-  config = lib.mkIf config.resources.gruvbox-wallpapers.enable {
+  config = lib.mkIf config.hm-modules.resources.gruvbox-wallpapers.enable {
 
     home.file = {
       "Pictures/wallpapers" = {

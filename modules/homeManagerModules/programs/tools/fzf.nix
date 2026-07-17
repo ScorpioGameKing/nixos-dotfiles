@@ -2,13 +2,13 @@
 
   options = { };
 
-  config = lib.mkIf config.tools.fzf.enable {
+  config = lib.mkIf config.hm-modules.tools.fzf.enable {
     home.packages = with pkgs; [
       fzf
     ];
     programs.fzf = {
       enable = true;
-      enableBashIntegration = config.shells.bash.enable;
+      enableBashIntegration = config.hm-modules.shells.bash.enable;
     };
   };
 }

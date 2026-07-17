@@ -2,7 +2,7 @@
 
   options = { };
 
-  config = lib.mkIf config.tools.nix-search-tv.enable {
+  config = lib.mkIf config.hm-modules.tools.nix-search-tv.enable {
     home.packages = with pkgs; [
       nix-search-tv
     ];

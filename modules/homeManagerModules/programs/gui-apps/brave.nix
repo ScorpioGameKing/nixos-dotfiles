@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.gui-apps.brave.enable {
+  config = lib.mkIf config.hm-modules.gui-apps.brave.enable {
     home.packages = with pkgs; [
       brave
     ];

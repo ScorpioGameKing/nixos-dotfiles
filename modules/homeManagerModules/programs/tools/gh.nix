@@ -2,7 +2,7 @@
 
   options = { };
 
-  config = lib.mkIf config.tools.gh.enable {
+  config = lib.mkIf config.hm-modules.tools.gh.enable {
     home.packages = with pkgs; [
       gh
     ];

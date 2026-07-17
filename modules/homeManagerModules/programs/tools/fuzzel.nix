@@ -9,7 +9,7 @@ in
   
   options = { };
 
-  config = lib.mkIf config.tools.fuzzel.enable {
+  config = lib.mkIf config.hm-modules.tools.fuzzel.enable {
     home.packages = with pkgs; [
       fuzzel
     ];

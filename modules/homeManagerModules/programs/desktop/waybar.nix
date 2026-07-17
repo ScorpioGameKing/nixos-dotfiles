@@ -9,7 +9,7 @@ in
   
   options = { };
 
-  config = lib.mkIf config.desktop.waybar.enable {
+  config = lib.mkIf config.hm-modules.desktop.waybar.enable {
     home.packages = with pkgs; [
       waybar
     ];

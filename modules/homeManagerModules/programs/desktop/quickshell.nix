@@ -9,7 +9,7 @@ in
   
   options = { };
 
-  config = lib.mkIf config.desktop.quickshell.enable {
+  config = lib.mkIf config.hm-modules.desktop.quickshell.enable {
     home.packages = with pkgs; [
       quickshell
     ];

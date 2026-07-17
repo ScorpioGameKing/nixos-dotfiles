@@ -8,8 +8,8 @@
     ];
     programs.lazygit = {
       enable = true;
-      enableBashIntegration = config.shells.bash.enable;
-      enableNushellIntegration = config.shells.nushell.enable;
+      enableBashIntegration = config.hm-modules.shells.bash.enable;
+      enableNushellIntegration = config.hm-modules.shells.nushell.enable;
     };
   };
 }

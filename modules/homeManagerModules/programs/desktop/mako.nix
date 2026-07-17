@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.desktop.mako.enable {
+  config = lib.mkIf config.hm-modules.desktop.mako.enable {
     home.packages = with pkgs; [
       mako
     ];

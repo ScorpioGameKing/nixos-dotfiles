@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.shells.nushell.enable {
+  config = lib.mkIf config.hm-modules.shells.nushell.enable {
     home.packages = with pkgs; [
       nushell
     ];

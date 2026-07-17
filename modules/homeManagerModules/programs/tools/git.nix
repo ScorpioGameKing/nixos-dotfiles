@@ -2,7 +2,7 @@
 
   options = { };
 
-  config = lib.mkIf config.tools.git.enable {
+  config = lib.mkIf config.hm-modules.tools.git.enable {
     home.packages = with pkgs; [
       git
     ];

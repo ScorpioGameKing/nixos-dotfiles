@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.desktop.swaybg.enable {
+  config = lib.mkIf config.hm-modules.desktop.swaybg.enable {
     home.packages = with pkgs; [
       swaybg
     ];
