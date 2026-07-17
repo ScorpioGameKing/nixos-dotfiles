@@ -138,6 +138,18 @@
         "type": "github"
       }
     },
+    "gruvbox-wallpapers": {
+      "flake": false,
+      "locked": {
+        "path": "github:AngelJumbo:gruvbox-wallpapers",
+        "type": "path"
+      },
+      "original": {
+        "path": "github:AngelJumbo:gruvbox-wallpapers",
+        "type": "path"
+      },
+      "parent": []
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -216,6 +228,7 @@
     },
     "root": {
       "inputs": {
+        "gruvbox-wallpapers": "gruvbox-wallpapers",
         "home-manager": "home-manager",
         "niri-dotfiles-repo": "niri-dotfiles-repo",
         "nixpkgs": "nixpkgs",
