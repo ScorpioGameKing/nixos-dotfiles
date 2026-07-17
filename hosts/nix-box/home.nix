@@ -48,7 +48,6 @@
   gh.enable = true;
   nix-search-tv = {
     enable = true;
-    enableTelevisionIntegration = true;
   };
   update-nix-fetchgit.enable = true;
   zoxide = {
