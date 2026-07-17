@@ -36,7 +36,7 @@
   # Manager setup.
   # -------------------------
 
-  outputs = { self, nixpkgs, stylix, niri-dotfiles-repo, home-manager, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, gruvbox-wallpapers, niri-dotfiles-repo, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
