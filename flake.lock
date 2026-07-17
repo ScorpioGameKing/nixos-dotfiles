@@ -177,7 +177,7 @@
         "type": "github"
       }
     },
-    "niri-dots": {
+    "niri-dotfiles-repo": {
       "flake": false,
       "locked": {
         "lastModified": 1784260893,
@@ -253,7 +253,7 @@
       "inputs": {
         "gruvbox-wallpapers": "gruvbox-wallpapers",
         "home-manager": "home-manager",
-        "niri-dots": "niri-dots",
+        "niri-dotfiles-repo": "niri-dotfiles-repo",
         "nixpkgs": "nixpkgs_2",
         "stylix": "stylix"
       }
