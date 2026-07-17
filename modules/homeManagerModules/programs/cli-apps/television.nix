@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    television.enable = lib.mkEnableOption "enables television";
-  };
+  options = { };
 
-  config = lib.mkIf config.television.enable {
+  config = lib.mkIf config.cli-apps.television.enable {
     home.packages = with pkgs; [
       television
     ];

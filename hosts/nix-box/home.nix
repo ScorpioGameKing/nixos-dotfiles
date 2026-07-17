@@ -48,14 +48,14 @@
   # CLI Apps
   cli-apps = {
     enable = true;
-    yazi.enable = false;
+    
+    joshuto.enable = false;
+    lazygit.enable = true;
+    neovim.enable = true;
+    oh-my-posh.enable = true;
+    television.enable = true;
+    yazi.enable = true;
   };
-  lazygit.enable = true;
-  neovim.enable = true;
-  oh-my-posh.enable = true;
-  television.enable = true;
-  #yazi.enable = true;
-  joshuto.enable = false;
   
   # Desktop Enviroment
   swaybg.enable = true;

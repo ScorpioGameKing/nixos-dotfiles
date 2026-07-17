@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    oh-my-posh.enable = lib.mkEnableOption "enables oh-my-posh";
-  };
+  options = { };
 
-  config = lib.mkIf config.oh-my-posh.enable {
+  config = lib.mkIf config.cli-apps.oh-my-posh.enable {
     home.packages = with pkgs; [
       oh-my-posh
     ];

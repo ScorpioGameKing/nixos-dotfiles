@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    lazygit.enable = lib.mkEnableOption "enables lazygit";
-  };
+  options = { };
 
-  config = lib.mkIf config.lazygit.enable {
+  config = lib.mkIf config.cli-apps.lazygit.enable {
     home.packages = with pkgs; [
       lazygit
     ];

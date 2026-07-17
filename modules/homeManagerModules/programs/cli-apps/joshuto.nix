@@ -7,11 +7,9 @@ in
 
 {
 
-  options = {
-    joshuto.enable = lib.mkEnableOption "enables joshuto";
-  };
+  options = { };
 
-  config = lib.mkIf config.joshuto.enable {
+  config = lib.mkIf config.cli-apps.joshuto.enable {
 
     home.packages = with pkgs; [
       joshuto

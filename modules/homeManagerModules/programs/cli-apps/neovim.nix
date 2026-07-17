@@ -7,11 +7,9 @@ in
 
 {
   
-  options = {
-    neovim.enable = lib.mkEnableOption "enables neovim";
-  };
+  options = { };
 
-  config = lib.mkIf config.neovim.enable {
+  config = lib.mkIf config.cli-apps.neovim.enable {
     home.packages = with pkgs; [
       neovim
     ];

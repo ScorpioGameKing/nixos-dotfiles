@@ -7,9 +7,7 @@ in
 
 {
 
-  options = {
-    
-  };
+  options = { };
 
   config = lib.mkIf config.cli-apps.yazi.enable {
 
