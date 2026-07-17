@@ -19,10 +19,10 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
     gruvbox-wallpapers = {
-      url = "github:AngelJumbo:gruvbox-wallpapers";
+      url = "github:AngelJumbo/gruvbox-wallpapers";
     };
     niri-dotfiles-repo = {
-      url = "github:ScorpioGameKing:Niri-Dotfiles";
+      url = "github:ScorpioGameKing/Niri-Dotfiles";
       flake = false;
     };
   };
