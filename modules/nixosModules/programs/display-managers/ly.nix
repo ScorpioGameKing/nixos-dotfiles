@@ -1,9 +1,5 @@
 { lib, config, ... }: 
 
-let 
-  hostname = if (builtins.pathExists ./private.nix) then (import ./private.nix) else  "NixOS"; 
-in
-
 {
 
   options = {
@@ -19,7 +15,7 @@ in
         cmatrix_max_codepoint = "0x30FF";
         clock = "%I:%M %p";
         vi_mode = true;
-        box_title = "${hostname}";
+        box_title = "NixOS";
         corner_top_left = "shutdown,restart,britup,britdown,password,tty";
         corner_top_right = "clock,battery,numlock,capslock";
       };
