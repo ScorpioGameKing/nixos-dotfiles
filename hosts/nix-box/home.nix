@@ -29,10 +29,8 @@
     enable = true;
     shells = {
       bash.enable = true;
-      nushell.enable = false;
     };
     terminals = {
-      alacritty.enable = true;
       wezterm.enable = true;
     };
     tools = {

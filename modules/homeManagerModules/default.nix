@@ -25,7 +25,6 @@
                 enable = lib.mkEnableOption "enables joshuto";
               };
             };
-            default = {};
           };
           lazygit = lib.mkOption {
             type = lib.types.submodule {
