@@ -9,6 +9,12 @@
       nushell
     ];
     home.shell.enableNushellIntegration = true;
+    programs.bash = {
+      enable = false;
+      initExtra = ''
+        nu
+      '';
+    };
     programs.nushell = {
       enable = true;
       shellAliases = {
