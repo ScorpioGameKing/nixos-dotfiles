@@ -9,7 +9,7 @@ in
 
   options = { };
 
-  config = lib.mkIf config.cli-apps.joshuto.enable {
+  config = lib.mkIf config.hm-modules.cli-apps.joshuto.enable {
 
     home.packages = with pkgs; [
       joshuto

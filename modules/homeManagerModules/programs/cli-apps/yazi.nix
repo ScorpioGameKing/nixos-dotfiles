@@ -9,7 +9,7 @@ in
 
   options = { };
 
-  config = lib.mkIf config.cli-apps.yazi.enable {
+  config = lib.mkIf config.hm-modules.cli-apps.yazi.enable {
 
     home.packages = with pkgs; [
       yazi

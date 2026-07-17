@@ -51,13 +51,16 @@
   };
   
   # CLI Apps
-  cli-apps = {
+  hm-modules = {
     enable = true;
-    lazygit.enable = true;
-    neovim.enable = true;
-    oh-my-posh.enable = true;
-    television.enable = true;
-    yazi.enable = true;
+    cli-apps = {
+      enable = true;
+      lazygit.enable = true;
+      neovim.enable = true;
+      oh-my-posh.enable = true;
+      television.enable = true;
+      yazi.enable = true;
+    };
   };
   
   # Desktop Enviroment

@@ -2,7 +2,7 @@
 
   options = { };
 
-  config = lib.mkIf config.cli-apps.lazygit.enable {
+  config = lib.mkIf config.hm-modules.cli-apps.lazygit.enable {
     home.packages = with pkgs; [
       lazygit
     ];

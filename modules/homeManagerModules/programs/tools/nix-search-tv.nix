@@ -8,7 +8,7 @@
     ];
     programs.nix-search-tv = {
       enable = true;
-      enableTelevisionIntegration = config.cli-apps.television.enable;
+      enableTelevisionIntegration = config.hm-modules.cli-apps.television.enable;
       settings = {
         indexes = [
           "nixpkgs"

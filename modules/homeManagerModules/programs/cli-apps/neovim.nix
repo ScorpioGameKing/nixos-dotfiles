@@ -9,7 +9,7 @@ in
   
   options = { };
 
-  config = lib.mkIf config.cli-apps.neovim.enable {
+  config = lib.mkIf config.hm-modules.cli-apps.neovim.enable {
     home.packages = with pkgs; [
       neovim
     ];
