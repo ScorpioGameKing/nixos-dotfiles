@@ -63,7 +63,7 @@ in
   bash.enable = true;
   
   # Terminals
-  alacritty.enable = false;
+  alacritty.enable = true;
   wezterm.enable = true;
   
   # Tools

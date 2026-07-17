@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{ lib, config, ... }: {
   imports = [
     ./../programs/window-managers/niri.nix
   ];
