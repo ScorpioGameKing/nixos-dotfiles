@@ -54,6 +54,7 @@ in
 
   imports = [
     ./../../homeManagerModules/groups/cli-apps.nix
+    ./../../homeManagerModules/groups/gui-apps.nix
     ./../../homeManagerModules/groups/shells.nix
     ./../../homeManagerModules/groups/terminals.nix
     ./../../homeManagerModules/groups/tools.nix
