@@ -5,7 +5,4 @@
     ./../programs/terminals/alacritty.nix
   ];
 
-  options = { };
-
-  config = lib.mkIf config.terminals.enable { };
 }

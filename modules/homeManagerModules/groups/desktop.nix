@@ -9,7 +9,4 @@
     ./../programs/desktop/waypaper.nix
   ];
 
-  options = { };
-
-  config = lib.mkIf config.hm-modules.desktop.enable { };
 }

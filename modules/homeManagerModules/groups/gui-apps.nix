@@ -6,7 +6,4 @@
     ./../programs/gui-apps/equibop.nix
   ];
 
-  options = { };
-
-  config = lib.mkIf config.hm-modules.gui-apps.enable { };
 }

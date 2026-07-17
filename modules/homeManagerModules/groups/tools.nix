@@ -13,7 +13,4 @@
     ./../programs/tools/zoxide.nix
   ];
 
-  options = { };
-
-  config = lib.mkIf config.tools.enable { };
 }

@@ -5,7 +5,4 @@
     ./../programs/shells/nushell.nix
   ];
 
-  options = { };
-  
-  config = lib.mkIf config.shells.enable { };
 }

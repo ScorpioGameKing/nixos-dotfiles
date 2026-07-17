@@ -21,13 +21,16 @@
   # ---------------------------
 
   # Tools
-  wget.enable = true;
   cmake.enable = true;
   gcc.enable = true;
   nodejs.enable = true;
+  pinentry-all.enable = true;
+  python3.enable = true;
+  python314Packages-colorama.enable = true;
+  python314Packages-raylib-python-cffi.enable = true;
   ripgrep.enable = true;
   tree-sitter.enable = true;
-  pinentry-all.enable = true;
+  wget.enable = true;
   
   # Display Managers
   ly.enable = true;
