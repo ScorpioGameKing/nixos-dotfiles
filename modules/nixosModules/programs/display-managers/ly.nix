@@ -13,6 +13,9 @@
         animation = "colormix";
         cmatrix_min_codepoint = "0x3000";
         cmatrix_max_codepoint = "0x30FF";
+        colormix_col1 = "0x00282828";
+        colormix_col2 = "0x00504945";
+        colormix_col3 = "0x00EBDBB2";
         clock = "%I:%M %p";
         vi_mode = true;
         box_title = "NixOS";
