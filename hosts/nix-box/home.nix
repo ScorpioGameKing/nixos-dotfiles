@@ -52,6 +52,7 @@ in
     ./../../homeManagerModules/groups/shells.nix
     ./../../homeManagerModules/groups/terminals.nix
     ./../../homeManagerModules/groups/tools.nix
+    ./../../homeManagerModules/groups/window-managers.nix
   ];
 
   # ---------------------------
