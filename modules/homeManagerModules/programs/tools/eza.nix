@@ -2,7 +2,6 @@
   
   options = {
     eza.enable = lib.mkEnableOption "enables eza";
-    eza.enableBashIntegration = lib.mkEnableOption "enables eza bash integration";
   };
 
   config = lib.mkIf config.eza.enable {
@@ -11,7 +10,7 @@
     ];
     programs.eza = {
       enable = true;
-      enableBashIntegration = config.eza.enableBashIntegration;
+      enableBashIntegration = lib.mkIf config.bash.enable;
       icons = "auto";
     };
   };

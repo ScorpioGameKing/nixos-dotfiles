@@ -33,43 +33,23 @@
   wezterm.enable = true;
   
   # Tools
-  eza = {
-    enable = true;
-    enableBashIntegration = true;
-  };
+  eza.enable = true;
   fastfetch.enable = true;
   fuzzel.enable = true;
-  fzf = {
-    enable = true;
-    enableBashIntegration = true;
-  };
+  fzf.enable = true;
   gpg.enable = true;
   git.enable = true;
   gh.enable = true;
-  nix-search-tv = {
-    enable = true;
-  };
-  update-nix-fetchgit.enable = true;
-  zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-  };
+  nix-search-tv.enable = true;
+  update-nix-fetchgit.enable = false;
+  zoxide.enable = true;
   
   # CLI Apps
   lazygit.enable = true;
   neovim.enable = true;
-  oh-my-posh = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-  television = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-  yazi = {
-    enable = true;
-    enableBashIntegration = true;
-  };
+  oh-my-posh.enable = true;
+  television.enable = true;
+  yazi.enable = true;
   joshuto.enable = false;
   
   # Desktop Enviroment
