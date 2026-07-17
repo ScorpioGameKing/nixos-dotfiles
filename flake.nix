@@ -36,7 +36,7 @@
   # Manager setup.
   # -------------------------
 
-  outputs = { self, inputs, nixpkgs, stylix, home-manager, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
