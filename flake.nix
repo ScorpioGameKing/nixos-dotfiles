@@ -21,10 +21,10 @@
     gruvbox-wallpapers = {
       url = "github:AngelJumbo/gruvbox-wallpapers";
     };
-    niri-dotfiles-repo = {
-      url = "github:ScorpioGameKing/Niri-Dotfiles/tree/master";
-      flake = false;
-    };
+    #niri-dotfiles-repo = {
+      #url = "github:ScorpioGameKing/Niri-Dotfiles/ref/master";
+     # flake = false;
+    #};
   };
   # -------------------------
   
@@ -34,7 +34,7 @@
   # along with a basic Home 
   # Manager setup.
   # -------------------------
-  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo, gruvbox-wallpapers, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, gruvbox-wallpapers, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based

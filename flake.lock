@@ -177,23 +177,6 @@
         "type": "github"
       }
     },
-    "niri-dotfiles-repo": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1784219769,
-        "narHash": "sha256-auy6CENMaBrcMl/BJrkIdZALjsbdt3dQNDOo6HeM4Wo=",
-        "owner": "ScorpioGameKing",
-        "repo": "Niri-Dotfiles",
-        "rev": "313a30c8cebacce8b5c3913ef8abed897eeb7ecf",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ScorpioGameKing",
-        "ref": "master",
-        "repo": "Niri-Dotfiles",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1761907660,
@@ -253,7 +236,6 @@
       "inputs": {
         "gruvbox-wallpapers": "gruvbox-wallpapers",
         "home-manager": "home-manager",
-        "niri-dotfiles-repo": "niri-dotfiles-repo",
         "nixpkgs": "nixpkgs_2",
         "stylix": "stylix"
       }
