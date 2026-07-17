@@ -19,7 +19,7 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
     niri-dotfiles-repo = {
-      url = "github:ScorpioGameKing/Niri-Dotfiles";
+      url = "github:ScorpioGameKing/Niri-Dotfiles/master";
       flake = false;
     };
     gruvbox-wallpapers = {
