@@ -20,12 +20,11 @@
 
         # General NixOS Commands
         qnc = "nix-collect-garbage -d";
-        qnfg = "update-nix-fetchgit --verbose --only-commented";
-        qnfgh = "update-nix-fetchgit --verbose --only-commented ~/nixos-dotfiles/hosts/nix-box/home.nix";
+        qnud = "nix flake update niri-dotfiles-repo --flake ~/nixos-dotfiles";
         
         # Nix-Box Build Commands
-        qnrb = "qnfgh && lg -p ~/nixos-dotfiles && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
-        qnrbf = "qnc && qnfgh && lg -p ~/nixos-dotfiles && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
+        qnrb = "qnud && lg -p ~/nixos-dotfiles && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
+        qnrbf = "qnc && qnud && lg -p ~/nixos-dotfiles && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
       };
       initExtra = ''
         ff
