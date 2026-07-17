@@ -48,7 +48,7 @@
   # CLI Apps
   cli-apps = {
     enable = true;
-    yazi.enabled = false;
+    yazi.enable = false;
   };
   lazygit.enable = true;
   neovim.enable = true;
