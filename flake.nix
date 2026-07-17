@@ -18,7 +18,10 @@
       url = "github:nix-community/home-manager/release-26.05";
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri-dotfiles-repo.url = "github:ScorpioGameKing/Niri-Dotfiles";
+    niri-dotfiles-repo = {
+      url = "github:ScorpioGameKing/Niri-Dotfiles";
+      flake = false;
+    };
   };
   # -------------------------
   
