@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    swaybg.enable = lib.mkEnableOption "enables swaybg";
-  };
+  options = { };
 
-  config = lib.mkIf config.swaybg.enable {
+  config = lib.mkIf config.desktop.swaybg.enable {
     home.packages = with pkgs; [
       swaybg
     ];

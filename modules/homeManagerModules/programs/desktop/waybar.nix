@@ -7,11 +7,9 @@ in
 
 {
   
-  options = {
-    waybar.enable = lib.mkEnableOption "enables waybar";
-  };
+  options = { };
 
-  config = lib.mkIf config.waybar.enable {
+  config = lib.mkIf config.desktop.waybar.enable {
     home.packages = with pkgs; [
       waybar
     ];

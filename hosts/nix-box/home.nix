@@ -26,7 +26,7 @@
   # ---------------------------
 
   # Shells
-  bash.enable = false;
+  bash.enable = true;
   nushell.enable = true;
   
   # Terminals
@@ -42,14 +42,11 @@
   git.enable = true;
   gh.enable = true;
   nix-search-tv.enable = true;
-  update-nix-fetchgit.enable = false;
   zoxide.enable = true;
   
   # CLI Apps
   cli-apps = {
     enable = true;
-    
-    joshuto.enable = false;
     lazygit.enable = true;
     neovim.enable = true;
     oh-my-posh.enable = true;
@@ -58,12 +55,15 @@
   };
   
   # Desktop Enviroment
-  swaybg.enable = true;
-  waypaper.enable = true;
-  swaylock.enable = true;
-  waybar.enable = true;
-  quickshell.enable = true;
-  mako.enable = true;
+  desktop = {
+    enable = true;
+    mako.enable = true;
+    quickshell.enable = true;
+    swaybg.enable = true;
+    swaylock.enable = true;
+    waybar.enable = true;
+    waypaper.enable = true;
+  };
   
   # GUI Apps
   brave.enable = true;

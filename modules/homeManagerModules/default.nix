@@ -1,4 +1,5 @@
 { pkgs, lib, ...}: {
+
   imports = [
     ./groups/cli-apps.nix
     ./groups/desktop.nix
@@ -9,4 +10,5 @@
     ./groups/tools.nix
     ./groups/window-managers.nix
   ];
+  
 }

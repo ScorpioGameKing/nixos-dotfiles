@@ -7,11 +7,9 @@ in
 
 {
   
-  options = {
-    swaylock.enable = lib.mkEnableOption "enables swaylock";
-  };
+  options = { };
 
-  config = lib.mkIf config.swaylock.enable {
+  config = lib.mkIf config.desktop.swaylock.enable {
     home.packages = with pkgs; [
       swaylock
     ];

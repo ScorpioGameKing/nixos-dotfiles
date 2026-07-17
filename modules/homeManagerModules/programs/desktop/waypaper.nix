@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    waypaper.enable = lib.mkEnableOption "enables waypaper";
-  };
+  options = { };
 
-  config = lib.mkIf config.waypaper.enable {
+  config = lib.mkIf config.desktop.waypaper.enable {
     home.packages = with pkgs; [
       waypaper
     ];

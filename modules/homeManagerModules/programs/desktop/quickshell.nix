@@ -7,11 +7,9 @@ in
 
 {
   
-  options = {
-    quickshell.enable = lib.mkEnableOption "enables quickshell";
-  };
+  options = { };
 
-  config = lib.mkIf config.quickshell.enable {
+  config = lib.mkIf config.desktop.quickshell.enable {
     home.packages = with pkgs; [
       quickshell
     ];

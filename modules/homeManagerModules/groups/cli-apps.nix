@@ -68,7 +68,5 @@
     };
   };
 
-  config = lib.mkIf config.cli-apps.enable {
-
-  };
+  config = lib.mkIf config.cli-apps.enable { };
 }

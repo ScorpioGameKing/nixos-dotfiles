@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    mako.enable = lib.mkEnableOption "enables mako";
-  };
+  options = { };
 
-  config = lib.mkIf config.mako.enable {
+  config = lib.mkIf config.desktop.mako.enable {
     home.packages = with pkgs; [
       mako
     ];
