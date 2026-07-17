@@ -95,12 +95,11 @@ in
   
   cli-apps = {
     enable = true;
-    lazygit.enable = true;
-    oh-my-posh.enable = true;
-    television.enable = true;
+    yazi.enable = true;
   };
-  
-  yazi.enable = true;
+  lazygit.enable = true;
+  oh-my-posh.enable = true;
+  television.enable = true;
   
   # ---------------------------
   # Source Niri Enabled Configs
