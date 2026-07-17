@@ -49,24 +49,6 @@ in
   home.stateVersion = "26.05";
 
   # ---------------------------
-  # User Packages
-  # ---------------------------
-
-  home.packages = with pkgs; [
-    fastfetch
-    waybar
-    waypaper
-    quickshell
-    swaylock
-    swaybg
-    neovim
-    brave
-    fuzzel
-    update-nix-fetchgit
-    vscodium
-  ];
-
-  # ---------------------------
   # Import Modules
   # ---------------------------
 
@@ -81,24 +63,43 @@ in
   # Flake Configuration
   # ---------------------------
 
+  # Shells
   bash.enable = true;
   
+  # Terminals
+  alacritty.enable = false;
+  wezterm.enable = true;
+  
+  # Tools
   eza.enable = true;
+  fastfetch.enable = true;
+  fuzzel.enable = true;
   fzf.enable = true;
   gpg.enable = true;
   git.enable = true;
   gh.enable = true;
   nix-search-tv.enable = true;
+  update-nix-fetchgit.enable = true;
   zoxide.enable = true;
   
+  # CLI Apps
   lazygit.enable = true;
+  neovim.enable = true;
   oh-my-posh.enable = true;
   television.enable = true;
   yazi.enable = true;
   
-  alacritty.enable = false;
-  wezterm.enable = true;
+  # Desktop Enviroment
+  swaybg.enable = true;
+  waypaper.enable = true;
+  swaylock.enable = true;
+  waybar.enable = true;
+  quickshell.enable = true;
   
+  # GUI Apps
+  brave.enable = true;
+  vscodium.enable = true;
+
   # ---------------------------
   # Source Niri Enabled Configs
   # ---------------------------
