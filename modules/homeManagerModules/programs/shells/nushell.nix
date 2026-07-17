@@ -28,10 +28,6 @@
         qnrbf = "qnc ; qnud ; lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
 
       };
-
-      extraLogin = ''
-        ff
-      '';
     };
   };
 }
