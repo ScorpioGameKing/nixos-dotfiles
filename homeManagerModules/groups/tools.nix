@@ -1,9 +1,9 @@
-{ pkgs, lib, ...}: {
+{ lib, config, ...}: {
 
   options = {
     tools.enable = lib.mkEnableOption "enables tools";
   };
-  
+
   config = lib.mkIf config.tools.enable {
     imports = [
       ./../programs/tools/eza.nix

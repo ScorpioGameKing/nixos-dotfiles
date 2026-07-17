@@ -1,4 +1,4 @@
-{ pkgs, lib, ...}: {
+{ lib, config, ...}: {
 
   options = {
     shells.enable = lib.mkEnableOption "enables shells";
