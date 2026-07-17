@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ config, pkgs, gruvbox-wallpapers, ... }:
+{ config, pkgs, ... }:
 
 # ---------------------------
 # Define shorthand variables
@@ -12,6 +12,12 @@
 
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  gruvbox-wallpapers = pkgs.fetchFromGitHub {
+    owner = "AngelJumbo";
+    repo = "gruvbox-wallpapers";
+    rev = "main";
+    sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
+  };
   # Rev comment for targeted updates. ^^^ is huge and takes forever
   niri-dotfiles-repo = pkgs.fetchFromGitHub {
     owner = "ScorpioGameKing";
@@ -25,7 +31,7 @@ let
     waybar = "waybar";
     wezterm = "wezterm";
     fastfetch = "fastfetch";
-    #yazi = "yazi";
+    yazi = "yazi";
     quickshell = "quickshell";
     swaylock = "swaylock";
     fuzzel = "fuzzel";

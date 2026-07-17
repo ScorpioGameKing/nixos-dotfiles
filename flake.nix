@@ -21,10 +21,10 @@
     gruvbox-wallpapers = {
       url = "github:AngelJumbo/gruvbox-wallpapers";
     };
-    #niri-dotfiles-repo = {
-      #url = "github:ScorpioGameKing/Niri-Dotfiles/ref/master";
-     # flake = false;
-    #};
+    niri-dotfiles-repo = {
+      url = "github:ScorpioGameKing/Niri-Dotfiles/ref/master";
+      flake = false;
+    };
   };
   # -------------------------
   
