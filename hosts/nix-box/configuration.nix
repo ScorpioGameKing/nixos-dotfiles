@@ -18,30 +18,33 @@
       ./../../nixosModules/groups/display-managers.nix
       ./../../nixosModules/groups/window-managers.nix
       ./../../nixosModules/groups/gui-apps.nix
-      ./../../nixosModules/groups/theme.nix
+      ./../../nixosModules/groups/desktop.nix
+      ./../../nixosModules/groups/tools.nix
     ];
   
   # ---------------------------
   # Flake Configuration
   # ---------------------------
 
-  niri.enable = true;
+  # Tools
+  wget.enable = true;
+  cmake.enable = true;
+  gcc.enable = true;
+  nodejs.enable = true;
+  ripgrep.enable = true;
+  tree-sitter.enable = true;
+  pinentry-all.enable = true;
+  
+  # Display Managers
   ly.enable = true;
-  steam.enable = true;
+  
+  # Window Managers
+  niri.enable = true;
+  
+  # Desktop Enviroment
   nb-stylix.enable = true;
-
-  # -------------------------
-  # System Wide Package Installs
-  # -------------------------
-
-  environment.systemPackages = with pkgs; [
-    wget         # 
-    cmake        # Build C Stuff
-    gcc          # Compile C Stuff
-    nodejs       # We have this here for neovim plugins(?)
-    ripgrep      # Grep go BRRRRRR
-    tree-sitter  # I like syntax-highlighting anywhere possible
-    pinentry-all # Current Solution to sign with git
-    xwayland-satellite
-  ];
+  xwayland-satellite.enable = true;
+  
+  # GUI Apps
+  steam.enable = true;
 }

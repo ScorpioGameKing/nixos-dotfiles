@@ -7,5 +7,6 @@
     ./../system/security.nix
     ./../system/services.nix
     ./../system/time.nix
+    ./../system/font.nix
   ];
 }
