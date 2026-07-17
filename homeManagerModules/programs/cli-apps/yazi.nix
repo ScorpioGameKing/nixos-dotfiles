@@ -1,7 +1,8 @@
-{ pkgs, lib, config, ...  }: 
+{ pkgs, lib, config, inputs ...  }: 
 
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  inherit (inputs) niri-dotfiles-repo;
 in
 
 {
@@ -16,10 +17,10 @@ in
       yazi
     ];
 
-    #xdg.configFile.yazi = {
-     # source = create_symlink "${niri-dotfiles-repo}/.config/yazi";
-      #recursive = true;
-    #};
+    xdg.configFile.yazi = {
+      source = create_symlink "${niri-dotfiles-repo}/.config/yazi";
+      recursive = true;
+    };
     
     programs.yazi = {
       enable = true;
