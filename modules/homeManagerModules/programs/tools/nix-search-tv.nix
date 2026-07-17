@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    nix-search-tv.enable = lib.mkEnableOption "enables nix-search-tv";
-  };
+  options = { };
 
-  config = lib.mkIf config.nix-search-tv.enable {
+  config = lib.mkIf config.tools.nix-search-tv.enable {
     home.packages = with pkgs; [
       nix-search-tv
     ];

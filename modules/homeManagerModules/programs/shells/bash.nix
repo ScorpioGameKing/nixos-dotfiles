@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    bash.enable = lib.mkEnableOption "enables bash";
-  };
+  options = { };
 
-  config = lib.mkIf config.bash.enable {
+  config = lib.mkIf config.shells.bash.enable {
     home.packages = with pkgs; [
       bash
     ];

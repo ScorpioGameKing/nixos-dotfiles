@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    zoxide.enable = lib.mkEnableOption "enables zoxide";
-  };
+  options = { };
 
-  config = lib.mkIf config.zoxide.enable {
+  config = lib.mkIf config.tools.zoxide.enable {
     home.packages = with pkgs; [
       zoxide
     ];

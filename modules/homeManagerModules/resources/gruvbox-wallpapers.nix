@@ -7,11 +7,9 @@ in
 
 {
 
-  options = {
-    gruvbox-wallpapers.enable = lib.mkEnableOption "enables gruvbox-wallpapers";
-  };
+  options = { };
 
-  config = lib.mkIf config.gruvbox-wallpapers.enable {
+  config = lib.mkIf config.resources.gruvbox-wallpapers.enable {
 
     home.file = {
       "Pictures/wallpapers" = {

@@ -7,11 +7,9 @@ in
 
 {
   
-  options = {
-    fastfetch.enable = lib.mkEnableOption "enables fastfetch";
-  };
+  options = { };
 
-  config = lib.mkIf config.fastfetch.enable {
+  config = lib.mkIf config.tools.fastfetch.enable {
     home.packages = with pkgs; [
       fastfetch
     ];

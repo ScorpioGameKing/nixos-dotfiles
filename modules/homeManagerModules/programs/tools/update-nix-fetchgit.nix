@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    update-nix-fetchgit.enable = lib.mkEnableOption "enables update-nix-fetchgit";
-  };
+  options = { };
 
-  config = lib.mkIf config.update-nix-fetchgit.enable {
+  config = lib.mkIf config.tools.update-nix-fetchgit.enable {
     home.packages = with pkgs; [
       update-nix-fetchgit
     ];

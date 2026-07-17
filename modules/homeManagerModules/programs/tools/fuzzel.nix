@@ -7,11 +7,9 @@ in
 
 {
   
-  options = {
-    fuzzel.enable = lib.mkEnableOption "enables fuzzel";
-  };
+  options = { };
 
-  config = lib.mkIf config.fuzzel.enable {
+  config = lib.mkIf config.tools.fuzzel.enable {
     home.packages = with pkgs; [
       fuzzel
     ];

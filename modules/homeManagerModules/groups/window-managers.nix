@@ -1,6 +1,23 @@
-{ lib, osConfig, ... }: {
+{ lib, osConfig, config, ... }: {
   imports = [
     ./../programs/window-managers/niri.nix
   ];
-  niri-configs.enable = lib.mkIf osConfig.niri.enable true;
+
+  options = {
+
+    window-managers.enable = lib.mkEnableOption "enables desktop";
+
+    window-managers.niri-configs = lib.mkOption {
+      type = lib.types.submodule {
+        options = {
+          enable = lib.mkEnableOption "enables niri-configs";
+        };
+        config = { niri-configs.enable = lib.mkIf osConfig.niri.enable true; };
+      };
+      default = {};
+    };
+  };
+
+  config = lib.mkIf config.window-managers.enable { };
+  
 }

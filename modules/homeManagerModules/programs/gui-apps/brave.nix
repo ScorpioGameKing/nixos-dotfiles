@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    brave.enable = lib.mkEnableOption "enables brave";
-  };
+  options = { };
 
-  config = lib.mkIf config.brave.enable {
+  config = lib.mkIf config.gui-apps.brave.enable {
     home.packages = with pkgs; [
       brave
     ];

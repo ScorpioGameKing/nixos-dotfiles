@@ -26,23 +26,29 @@
   # ---------------------------
 
   # Shells
-  bash.enable = true;
-  nushell.enable = true;
+  shells = {
+    bash.enable = true;
+    nushell.enable = true;
+  };
   
   # Terminals
-  alacritty.enable = true;
-  wezterm.enable = true;
+  terminals = {
+    alacritty.enable = true;
+    wezterm.enable = true;
+  };
   
   # Tools
-  eza.enable = true;
-  fastfetch.enable = true;
-  fuzzel.enable = true;
-  fzf.enable = true;
-  gpg.enable = true;
-  git.enable = true;
-  gh.enable = true;
-  nix-search-tv.enable = true;
-  zoxide.enable = true;
+  tools = {
+    eza.enable = true;
+    fastfetch.enable = true;
+    fuzzel.enable = true;
+    fzf.enable = true;
+    gpg.enable = true;
+    git.enable = true;
+    gh.enable = true;
+    nix-search-tv.enable = true;
+    zoxide.enable = true;
+  };
   
   # CLI Apps
   cli-apps = {
@@ -57,7 +63,6 @@
   # Desktop Enviroment
   desktop = {
     enable = true;
-    mako.enable = true;
     quickshell.enable = true;
     swaybg.enable = true;
     swaylock.enable = true;
@@ -66,10 +71,14 @@
   };
   
   # GUI Apps
-  brave.enable = true;
-  equibop.enable = true;
-  vscodium.enable = true;
+  gui-apps = {
+    brave.enable = true;
+    equibop.enable = true;
+    vscodium.enable = true;
+  };
 
   # Optional Resources
-  gruvbox-wallpapers.enable = true;
+  resources = {
+    gruvbox-wallpapers.enable = true;
+  };
 }

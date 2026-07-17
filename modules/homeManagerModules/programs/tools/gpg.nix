@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    gpg.enable = lib.mkEnableOption "enables gpg";
-  };
+  options = { };
 
-  config = lib.mkIf config.gpg.enable {
+  config = lib.mkIf config.tools.gpg.enable {
     programs.gpg.enable = true;
     services.gpg-agent = {
       enable = true;

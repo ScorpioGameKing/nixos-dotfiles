@@ -7,11 +7,9 @@ in
 
 {
 
-  options = {
-    niri-configs.enable = lib.mkEnableOption "enables niri-configs";
-  };
+  options = { };
   
-  config = lib.mkIf config.niri-configs.enable {
+  config = lib.mkIf config.window-managers.niri-configs.enable {
     xdg.configFile.niri = {
       source = create_symlink "${niri-dotfiles-repo}/.config/niri";
       recursive = true;

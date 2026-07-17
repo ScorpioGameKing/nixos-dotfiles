@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    gh.enable = lib.mkEnableOption "enables gh";
-  };
+  options = { };
 
-  config = lib.mkIf config.gh.enable {
+  config = lib.mkIf config.tools.gh.enable {
     home.packages = with pkgs; [
       gh
     ];

@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    nushell.enable = lib.mkEnableOption "enables nushell";
-  };
+  options = { };
 
-  config = lib.mkIf config.nushell.enable {
+  config = lib.mkIf config.shells.nushell.enable {
     home.packages = with pkgs; [
       nushell
     ];

@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    git.enable = lib.mkEnableOption "enables git";
-  };
+  options = { };
 
-  config = lib.mkIf config.git.enable {
+  config = lib.mkIf config.tools.git.enable {
     home.packages = with pkgs; [
       git
     ];

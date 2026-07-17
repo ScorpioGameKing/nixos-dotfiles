@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    fzf.enable = lib.mkEnableOption "enables fzf";
-  };
+  options = { };
 
-  config = lib.mkIf config.fzf.enable {
+  config = lib.mkIf config.tools.fzf.enable {
     home.packages = with pkgs; [
       fzf
     ];

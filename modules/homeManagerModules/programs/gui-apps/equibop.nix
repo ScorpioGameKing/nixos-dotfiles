@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    equibop.enable = lib.mkEnableOption "enables equibop";
-  };
+  options = { };
 
-  config = lib.mkIf config.equibop.enable {
+  config = lib.mkIf config.gui-apps.equibop.enable {
     home.packages = with pkgs; [
       equibop
     ];

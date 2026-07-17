@@ -1,10 +1,8 @@
 { pkgs, lib, config, ...  }: {
 
-  options = {
-    alacritty.enable = lib.mkEnableOption "enables alacritty";
-  };
+  options = { };
 
-  config = lib.mkIf config.alacritty.enable {
+  config = lib.mkIf config.terminals.alacritty.enable {
     home.packages = with pkgs; [
       alacritty
     ];

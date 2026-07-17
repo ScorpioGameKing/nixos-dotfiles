@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
   
-  options = {
-    vscodium.enable = lib.mkEnableOption "enables vscodium";
-  };
+  options = { };
 
-  config = lib.mkIf config.vscodium.enable {
+  config = lib.mkIf config.gui-apps.vscodium.enable {
     home.packages = with pkgs; [
       vscodium
     ];

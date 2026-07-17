@@ -7,11 +7,9 @@ in
 
 {
 
-  options = {
-    wezterm.enable = lib.mkEnableOption "enables wezterm";
-  };
+  options = { };
 
-  config = lib.mkIf config.wezterm.enable {
+  config = lib.mkIf config.terminals.wezterm.enable {
     home.packages = with pkgs; [
       wezterm
     ];
