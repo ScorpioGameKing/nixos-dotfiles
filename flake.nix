@@ -18,6 +18,7 @@
       url = "github:nix-community/home-manager/release-26.05";
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri-dotfiles-repo.url = "github:ScorpioGameKing/Niri-Dotfiles";
   };
   # -------------------------
   
@@ -27,7 +28,7 @@
   # along with a basic Home 
   # Manager setup.
   # -------------------------
-  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
