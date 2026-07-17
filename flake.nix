@@ -1,6 +1,9 @@
 # -------------------------
 # Nix-Box Base Flake 
 # -------------------------
+let
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+in
 {
   description = "Scorpio's First Nix-Box";
 
@@ -31,7 +34,7 @@
   # along with a basic Home 
   # Manager setup.
   # -------------------------
-  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo, create_symlink, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based

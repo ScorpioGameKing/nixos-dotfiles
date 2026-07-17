@@ -18,13 +18,6 @@ let
     rev = "main";
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
-  # Rev comment for targeted updates. ^^^ is huge and takes forever
-  #niri-dotfiles-repo = pkgs.fetchFromGitHub {
-  #  owner = "ScorpioGameKing";
-  #  repo = "Niri-Dotfiles";
-  #  rev = "313a30c8cebacce8b5c3913ef8abed897eeb7ecf"; #master
-  #  sha256 = "0sp1iivyia1k6i87gdyxqs70p43m12wjdhaz6bf1ls2c8c4bmv3a";
-  #};
   niri-dot-configs = {
     niri = "niri";
     nvim = "nvim";
