@@ -36,16 +36,12 @@
   # Manager setup.
   # -------------------------
 
-  outputs = inputs: {
+  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
 
-    
     # -------------------------
     # Nix-Box Flake: Niri based
     # configs for my laptop.
     # -------------------------
-
-    niri-dots = "${inputs.niri-dots}";
-    nixpkgs = "${inputs.nixpkgs}";
 
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
