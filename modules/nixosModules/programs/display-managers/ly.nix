@@ -17,7 +17,6 @@
         colormix_col2 = "0x00504945";
         colormix_col3 = "0x00EBDBB2";
         clock = "%I:%M %p";
-        vi_mode = true;
         box_title = "NixOS";
         corner_top_left = "shutdown,restart,britup,britdown,password,tty";
         corner_top_right = "clock,battery,numlock,capslock";
