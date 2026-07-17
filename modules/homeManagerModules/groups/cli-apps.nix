@@ -14,7 +14,7 @@
     cli-apps.yazi = lib.mkOption {
       type = lib.types.submodule {
         options = {
-          enabled = lib.mkEnableOption "enables yazi";
+          enable = lib.mkEnableOption "enables yazi";
         };
       };
       default = {};
@@ -22,8 +22,6 @@
   };
 
   config = lib.mkIf config.cli-apps.enable {
-
-    yazi.enable = config.cli-apps.yazi.enable;
 
   };
 }
