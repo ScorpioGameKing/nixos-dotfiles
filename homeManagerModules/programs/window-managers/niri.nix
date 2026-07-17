@@ -1,5 +1,10 @@
 { lib, config, inputs, ... }: 
 
+let
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  inherit (inputs) niri-dotfiles-repo;
+in
+
 {
 
   options = {
