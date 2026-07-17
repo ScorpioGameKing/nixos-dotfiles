@@ -1,12 +1,5 @@
-{ lib, config, ...}: {
-
-  options = {
-    terminals.enable = lib.mkEnableOption "enables terminals";
-  };
-
-  config = lib.mkIf config.terminals.enable {
-    imports = [
-      ./../programs/terminals/wezterm.nix
-    ];
-  };
+{ pkgs, lib, ...}: {
+  imports = [
+    ./../programs/terminals/wezterm.nix
+  ];
 }
