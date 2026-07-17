@@ -15,8 +15,8 @@ in
     home.packages = with pkgs; [
       neovim
     ];
-    xdg.configFile.neovim = {
-      source = create_symlink "${niri-dotfiles-repo}/.config/neovim";
+    xdg.configFile.nvim = {
+      source = create_symlink "${niri-dotfiles-repo}/.config/nvim";
       recursive = true;
     };
   };
