@@ -18,12 +18,12 @@
       url = "github:nix-community/home-manager/release-26.05";
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri-dotfiles-repo = {
-      url = "github:ScorpioGameKing/Niri-Dotfiles/master";
-      flake = false;
-    };
     gruvbox-wallpapers = {
       url = "github:AngelJumbo:gruvbox-wallpapers";
+    };
+    niri-dotfiles-repo = {
+      url = "github:ScorpioGameKing/Niri-Dotfiles";
+      flake = false;
     };
   };
   # -------------------------
