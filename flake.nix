@@ -1,9 +1,6 @@
 # -------------------------
 # Nix-Box Base Flake 
 # -------------------------
-let
-  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-in
 {
   description = "Scorpio's First Nix-Box";
 
@@ -12,6 +9,7 @@ in
   # Manager and Stylix repos
   # -------------------------
   inputs = {
+    create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
     nixpkgs.url = "nixpkgs/nixos-26.05";
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
