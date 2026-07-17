@@ -18,14 +18,7 @@
   # ---------------------------
 
   imports = [
-    ./../../homeManagerModules/groups/cli-apps.nix
-    ./../../homeManagerModules/groups/desktop.nix
-    ./../../homeManagerModules/groups/gui-apps.nix
-    ./../../homeManagerModules/groups/resources.nix
-    ./../../homeManagerModules/groups/shells.nix
-    ./../../homeManagerModules/groups/terminals.nix
-    ./../../homeManagerModules/groups/tools.nix
-    ./../../homeManagerModules/groups/window-managers.nix
+    ./../../modules/homeManagerModules/default.nix
   ];
 
   # ---------------------------

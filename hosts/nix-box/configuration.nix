@@ -13,13 +13,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ./../../nixosModules/groups/system.nix
-      ./../../nixosModules/groups/users.nix
-      ./../../nixosModules/groups/display-managers.nix
-      ./../../nixosModules/groups/window-managers.nix
-      ./../../nixosModules/groups/gui-apps.nix
-      ./../../nixosModules/groups/desktop.nix
-      ./../../nixosModules/groups/tools.nix
+      ./../../modules/nixosModules/default.nix
     ];
   
   # ---------------------------
