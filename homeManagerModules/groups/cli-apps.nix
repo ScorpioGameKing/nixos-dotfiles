@@ -2,7 +2,7 @@
 
   options = {
     cli-apps.enable = lib.mkEnableOption "enables cli-apps";
-    cli-apps.yazi.enable = lib.mkEnableOption "enables yazi";
+    yazi.enable = lib.mkEnableOption "enables yazi";
   };
   config = lib.mkIf config.cli-apps.enable {
     imports = [
