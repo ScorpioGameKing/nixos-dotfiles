@@ -1,11 +1,11 @@
 { ... }: {
   imports = [
-    ./../tools/cmake.nix
-    ./../tools/gcc.nix
-    ./../tools/nodejs.nix
-    ./../tools/pinentry-all.nix
-    ./../tools/ripgrep.nix
-    ./../tools/tree-sitter.nix
-    ./../tools/wget.nix
+    ./../programs/tools/cmake.nix
+    ./../programs/tools/gcc.nix
+    ./../programs/tools/nodejs.nix
+    ./../programs/tools/pinentry-all.nix
+    ./../programs/tools/ripgrep.nix
+    ./../programs/tools/tree-sitter.nix
+    ./../programs/tools/wget.nix
   ];
 }
