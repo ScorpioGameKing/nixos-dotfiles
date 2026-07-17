@@ -9,7 +9,6 @@
   # Manager and Stylix repos
   # -------------------------
   inputs = {
-    create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
     nixpkgs.url = "nixpkgs/nixos-26.05";
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
@@ -23,6 +22,10 @@
       url = "github:ScorpioGameKing/Niri-Dotfiles";
       flake = false;
     };
+    gruvbox-wallpapers = {
+      url = "github:AngelJumbo:gruvbox-wallpapers";
+      flake = false;
+    };
   };
   # -------------------------
   
@@ -32,7 +35,7 @@
   # along with a basic Home 
   # Manager setup.
   # -------------------------
-  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo, create_symlink, ... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo, gruvbox-wallpapers, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based

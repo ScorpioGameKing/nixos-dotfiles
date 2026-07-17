@@ -1,4 +1,10 @@
-{ pkgs, lib, config, niri-dotfiles-repo, create_symlink, ...  }: {
+{ pkgs, lib, config, niri-dotfiles-repo, ...  }: 
+
+let
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+in
+
+{
 
   options = {
     yazi.enable = lib.mkEnableOption "enables yazi";
