@@ -8,8 +8,5 @@
     ./../programs/cli-apps/television.nix
     ./../programs/cli-apps/yazi.nix
   ];
-
-  options = { };
-
-  config = lib.mkIf config.hm-modules.cli-apps.enable { };
+  
 }
