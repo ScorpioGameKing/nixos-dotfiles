@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ config, pkgs, niri-dots, ... }:
+{ inputs, config, pkgs, ... }:
 
 # ---------------------------
 # Define shorthand variables
@@ -109,7 +109,7 @@ in
 
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
-      source = create_symlink "${niri-dotfiles-repo}/.config/${subpath}";
+      source = create_symlink "${inputs.niri-dots}/.config/${subpath}";
       recursive = true;
     })
     niri-dot-configs;
