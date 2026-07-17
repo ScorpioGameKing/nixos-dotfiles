@@ -12,7 +12,7 @@
         options = {
           enable = lib.mkEnableOption "enables niri-configs";
         };
-        config = { niri-configs.enable = lib.mkIf osConfig.niri.enable true; };
+        config = { enable = lib.mkIf osConfig.niri.enable true; };
       };
       default = {};
     };
