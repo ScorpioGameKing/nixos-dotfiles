@@ -22,11 +22,8 @@
   };
 
   config = lib.mkIf config.cli-apps.enable {
-    cli-apps = {
-      enable = false;
-      yazi = {
-        enable = false;
-      };
-    };
+
+    yazi.enable = config.cli-apps.yazi.enable;
+
   };
 }
