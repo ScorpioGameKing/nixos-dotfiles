@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     gcc.enable = lib.mkEnableOption "enables gcc";

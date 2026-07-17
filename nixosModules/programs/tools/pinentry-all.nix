@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     pinentry-all.enable = lib.mkEnableOption "enables pinentry-all";

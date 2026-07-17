@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     tree-sitter.enable = lib.mkEnableOption "enables tree-sitter";

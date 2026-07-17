@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     xwayland-satellite.enable = lib.mkEnableOption "enables xwayland-satellite";

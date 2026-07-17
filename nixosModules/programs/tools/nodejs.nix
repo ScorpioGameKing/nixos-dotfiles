@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     nodejs.enable = lib.mkEnableOption "enables nodejs";

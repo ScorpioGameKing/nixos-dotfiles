@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     cmake.enable = lib.mkEnableOption "enables cmake";
