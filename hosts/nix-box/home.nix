@@ -82,18 +82,22 @@ in
   # ---------------------------
 
   bash.enable = true;
+  
   eza.enable = true;
   fzf.enable = true;
   gpg.enable = true;
   git.enable = true;
   gh.enable = true;
-  lazygit.enable = true;
   nix-search-tv.enable = true;
+  zoxide.enable = true;
+  
+  lazygit.enable = true;
   oh-my-posh.enable = true;
   television.enable = true;
-  wezterm.enable = true;
   yazi.enable = true;
-  zoxide.enable = true;
+  
+  alacritty.enable = true;
+  wezterm.enable = true;
   
   # ---------------------------
   # Source Niri Enabled Configs
