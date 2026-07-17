@@ -13,7 +13,7 @@
     cli-apps.enable = lib.mkEnableOption "enables cli-apps";
   };
 
-  config = lib.mkIf config.cli-apps.enable = {
-    
+  config = lib.mkIf config.cli-apps.enable {
+
   };
 }
