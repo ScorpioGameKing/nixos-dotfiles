@@ -54,7 +54,7 @@
   neovim.enable = true;
   oh-my-posh.enable = true;
   television.enable = true;
-  yazi.enable = true;
+  #yazi.enable = true;
   joshuto.enable = false;
   
   # Desktop Enviroment
