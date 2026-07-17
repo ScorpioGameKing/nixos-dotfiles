@@ -18,18 +18,7 @@ let
     rev = "main";
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
-  # Rev comment for targeted updates. ^^^ is huge and takes forever
   inherit (inputs) niri-dotfiles-repo;
-  niri-dot-configs = {
-    nvim = "nvim";
-    waybar = "waybar";
-    wezterm = "wezterm";
-    fastfetch = "fastfetch";
-    quickshell = "quickshell";
-    swaylock = "swaylock";
-    fuzzel = "fuzzel";
-    yeet = "yeet";
-  };
 in
 
 {
@@ -97,17 +86,6 @@ in
   brave.enable = true;
   equibop.enable = true;
   vscodium.enable = true;
-
-  # ---------------------------
-  # Source Niri Enabled Configs
-  # ---------------------------
-
-  xdg.configFile = builtins.mapAttrs 
-    (name: subpath: {
-      source = create_symlink "${niri-dotfiles-repo}/.config/${subpath}";
-      recursive = true;
-    })
-    niri-dot-configs;
 
   # ---------------------------
   # Source User Files
