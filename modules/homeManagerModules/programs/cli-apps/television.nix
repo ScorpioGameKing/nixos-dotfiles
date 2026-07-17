@@ -2,6 +2,7 @@
   
   options = {
     television.enable = lib.mkEnableOption "enables television";
+    television.enableBashIntegration = lib.mkEnableOption "enables bash integration";
   };
 
   config = lib.mkIf config.television.enable {
@@ -10,7 +11,7 @@
     ];
     programs.television = {
       enable = true;
-      enableBashIntegration = true;
+      enableBashIntegration = config.television.enableBashIntegration;
     };
   };
 }

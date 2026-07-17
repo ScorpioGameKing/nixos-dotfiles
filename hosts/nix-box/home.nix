@@ -48,7 +48,10 @@
   lazygit.enable = true;
   neovim.enable = true;
   oh-my-posh.enable = true;
-  television.enable = true;
+  television = {
+    enable = true;
+    enableBashIntegration = false;
+  };
   yazi.enable = true;
   joshuto.enable = false;
   
