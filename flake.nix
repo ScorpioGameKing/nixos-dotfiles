@@ -28,7 +28,7 @@
   # along with a basic Home 
   # Manager setup.
   # -------------------------
-  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo... }: {
+  outputs = { self, nixpkgs, stylix, home-manager, niri-dotfiles-repo, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
