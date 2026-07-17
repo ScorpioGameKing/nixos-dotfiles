@@ -44,8 +44,8 @@
     # configs for my laptop.
     # -------------------------
 
-    niri-dots = "${niri-dots}";
-    
+    niri-dots = "${inputs.niri-dots}";
+
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
 	    modules = [
