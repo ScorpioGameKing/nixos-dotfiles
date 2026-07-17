@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 # ---------------------------
 # Define shorthand variables
@@ -19,12 +19,7 @@ let
     sha256 = "sha256-dO/2+jTwo3s1LCLHg8f5xYI4MIJ44mSH1f+FQjDT508=";
   };
   # Rev comment for targeted updates. ^^^ is huge and takes forever
-  niri-dotfiles-repo = pkgs.fetchFromGitHub {
-    owner = "ScorpioGameKing";
-    repo = "Niri-Dotfiles";
-    rev = "09068d3025650693fc0f5ff552a8d53049764669"; #master
-    sha256 = "0g4xs0dpqb7mn6wljh6wpbpa1r0pq1d4i4rm4zz9h9hqi4wb255b";
-  };
+  inherit (inputs) niri-dotfiles-repo;
   niri-dot-configs = {
     niri = "niri";
     nvim = "nvim";

@@ -36,7 +36,7 @@
   # Manager setup.
   # -------------------------
 
-  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
+  outputs = inputs @ { self, nixpkgs, stylix, home-manager, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
@@ -53,6 +53,7 @@
 		      home-manager = {
 		        useGlobalPkgs = true;
 			      useUserPackages = true;
+            extraSpecialArgs = { inherit inputs; };
 			      users.scorpio = import ./hosts/nix-box/home.nix;
 			      backupFileExtension = "backup";
 		      };
