@@ -11,6 +11,7 @@
     programs.eza = {
       enable = true;
       enableBashIntegration = config.bash.enable;
+      enableNushellIntegration = config.nushell.enable;
       icons = "auto";
     };
   };

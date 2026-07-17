@@ -11,6 +11,7 @@
     programs.oh-my-posh = {
       enable = true;
       enableBashIntegration = config.bash.enable;
+      enableNushellIntegration = config.nushell.enable;
       useTheme = "gruvbox";
     };
   };

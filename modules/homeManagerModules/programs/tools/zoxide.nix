@@ -11,6 +11,7 @@
     programs.zoxide = {
       enable = true;
       enableBashIntegration = config.bash.enable;
+      enableNushellIntegration = config.nushell.enable;
       options = [
         "--cmd cd"
       ];

@@ -8,6 +8,7 @@
     home.packages = with pkgs; [
       nushell
     ];
+    home.shell.enableNushellIntegration = true;
     programs.nushell = {
       enable = true;
       shellAliases = {

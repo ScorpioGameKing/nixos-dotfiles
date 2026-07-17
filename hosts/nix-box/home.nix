@@ -46,6 +46,7 @@
   zoxide.enable = true;
   
   # CLI Apps
+  cli-apps.enable = true;
   lazygit.enable = true;
   neovim.enable = true;
   oh-my-posh.enable = true;

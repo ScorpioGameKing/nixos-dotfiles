@@ -11,6 +11,7 @@
     programs.television = {
       enable = true;
       enableBashIntegration = config.bash.enable;
+      enableNushellIntegration = config.nushell.enable;
     };
   };
 }
