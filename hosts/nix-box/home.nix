@@ -100,6 +100,7 @@ in
   
   # GUI Apps
   brave.enable = true;
+  equibop.enable = true;
   vscodium.enable = true;
 
   # ---------------------------

@@ -1,6 +1,7 @@
 # -------------------------
 # Nix-Box Base Flake 
 # -------------------------
+
 {
   description = "Scorpio's First Nix-Box";
 
@@ -8,6 +9,7 @@
   # Setup our Packages, Home
   # Manager and Stylix repos
   # -------------------------
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
     stylix = {
@@ -22,11 +24,10 @@
       url = "github:AngelJumbo/gruvbox-wallpapers";
     };
     #niri-dotfiles-repo = {
-    #  url = "github:ScorpioGameKing/Niri-Dotfiles/ref/master";
+    #  url = "github:ScorpioGameKing/Niri-Dotfiles/master";
     #  flake = false;
     #};
   };
-  # -------------------------
   
   # -------------------------
   # Pass Repositories into
@@ -34,12 +35,14 @@
   # along with a basic Home 
   # Manager setup.
   # -------------------------
-  outputs = { self, nixpkgs, stylix, home-manager, gruvbox-wallpapers, ... }: {
+
+  outputs = { self, nixpkgs, stylix, home-manager, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
     # configs for my laptop.
     # -------------------------
+    
 	  nixosConfigurations.nix-box = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
 	    modules = [
@@ -57,6 +60,4 @@
       ];
 	  };
   };
-  # -------------------------
 }
-# -------------------------
