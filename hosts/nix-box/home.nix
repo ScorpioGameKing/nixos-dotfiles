@@ -26,7 +26,7 @@
   # ---------------------------
 
   # Shells
-  bash.enable = true;
+  bash.enable = false;
   nushell.enable = true;
   
   # Terminals
