@@ -8,8 +8,8 @@
     ];
     programs.zoxide = {
       enable = true;
-      enableBashIntegration = config.bash.enable;
-      enableNushellIntegration = config.nushell.enable;
+      enableBashIntegration = config.shells.bash.enable;
+      enableNushellIntegration = config.shells.nushell.enable;
       options = [
         "--cmd cd"
       ];

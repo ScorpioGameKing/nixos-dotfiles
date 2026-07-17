@@ -8,7 +8,7 @@
     ];
     programs.fzf = {
       enable = true;
-      enableBashIntegration = config.bash.enable;
+      enableBashIntegration = config.shells.bash.enable;
     };
   };
 }
