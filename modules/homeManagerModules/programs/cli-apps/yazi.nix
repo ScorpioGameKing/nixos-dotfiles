@@ -9,6 +9,7 @@ in
 
   options = {
     yazi.enable = lib.mkEnableOption "enables yazi";
+    yazi.enableBashIntegration = lib.mkEnableOption "enables yazi bash integration";
   };
 
   config = lib.mkIf config.yazi.enable {
@@ -24,7 +25,7 @@ in
     
     programs.yazi = {
       enable = true;
-      enableBashIntegration = true;
+      enableBashIntegration = config.yazi.enableBashIntegration;
     };
   };
 }

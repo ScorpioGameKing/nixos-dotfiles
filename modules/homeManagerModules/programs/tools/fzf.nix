@@ -2,6 +2,7 @@
 
   options = {
     fzf.enable = lib.mkEnableOption "enables fzf";
+    fzf.enableBashIntegration = lib.mkEnableOption "enables fzf bash integration";
   };
 
   config = lib.mkIf config.fzf.enable {
@@ -10,7 +11,7 @@
     ];
     programs.fzf = {
       enable = true;
-      enableBashIntegration = true;
+      enableBashIntegration = config.fzf.enableBashIntegration;
     };
   };
 }

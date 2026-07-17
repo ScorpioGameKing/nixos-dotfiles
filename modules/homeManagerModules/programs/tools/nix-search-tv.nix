@@ -2,6 +2,7 @@
 
   options = {
     nix-search-tv.enable = lib.mkEnableOption "enables nix-search-tv";
+    nix-search-tv.enableTelevisionIntegration = lib.mkEnableOption "enables nix-search-tv television integration";
   };
 
   config = lib.mkIf config.nix-search-tv.enable {
@@ -10,7 +11,7 @@
     ];
     programs.nix-search-tv = {
       enable = true;
-      enableTelevisionIntegration = true;
+      enableTelevisionIntegration = config.nix-search-tv.enableTelevisionIntegration;
       settings = {
         indexes = [
           "nixpkgs"

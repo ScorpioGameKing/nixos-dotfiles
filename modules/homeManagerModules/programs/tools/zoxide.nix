@@ -2,6 +2,7 @@
 
   options = {
     zoxide.enable = lib.mkEnableOption "enables zoxide";
+    zoxide.enableBashIntegration = lib.mkEnableOption "enables zoxide bash integration";
   };
 
   config = lib.mkIf config.zoxide.enable {
@@ -10,7 +11,7 @@
     ];
     programs.zoxide = {
       enable = true;
-      enableBashIntegration = true;
+      enableBashIntegration = config.zoxide.enableBashIntegration;
       options = [
         "--cmd cd"
       ];
