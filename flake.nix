@@ -24,7 +24,6 @@
     };
     gruvbox-wallpapers = {
       url = "github:AngelJumbo:gruvbox-wallpapers";
-      flake = false;
     };
   };
   # -------------------------
