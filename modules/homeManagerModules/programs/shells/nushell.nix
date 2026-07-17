@@ -10,7 +10,7 @@
     ];
     home.shell.enableNushellIntegration = true;
     programs.bash = {
-      enable = false;
+      enable = true;
       initExtra = ''
         nu
       '';
