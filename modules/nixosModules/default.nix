@@ -240,27 +240,6 @@
               };
             };
           };
-          python3 = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables python3";
-              };
-            };
-          };
-          python314Packages-colorama = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables python314Packages-colorama";
-              };
-            };
-          };
-          python314Packages-raylib-python-cffi = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables python314Packages-raylib-python-cffi";
-              };
-            };
-          };
           ripgrep = lib.mkOption {
             type = lib.types.submodule {
               options = {
