@@ -29,10 +29,7 @@
                   type = lib.types.str;
                   default = "";
                 };
-                autoEnable = lib.mkOption {
-                  type = lib.types.bool;
-                  default = false;
-                };
+                autoEnable = lib.mkEnableOption "enables autoEnable";
               };
             };
           };
