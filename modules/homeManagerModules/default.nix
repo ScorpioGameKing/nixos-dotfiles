@@ -336,7 +336,7 @@
               options = {
                 enable = lib.mkEnableOption "enables niri-configs";
               };
-              config = { enable = lib.mkIf osConfig.niri.enable true; };
+              config = { enable = lib.mkIf osConfig.nixos-modules.window-managers.niri.enable true; };
             };
           };
         };
