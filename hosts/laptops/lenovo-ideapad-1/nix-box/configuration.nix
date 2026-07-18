@@ -37,7 +37,7 @@
     display-managers = {
       enable = true;
 
-      ly - {
+      ly = {
         enable = true;
         settings = {
           animation = "colormix";
