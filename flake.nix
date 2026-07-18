@@ -47,14 +47,14 @@
 	    system = "x86_64-linux";
 	    modules = [
         stylix.nixosModules.stylix
-	      ./hosts/laptops/nix-box/configuration.nix
+	      ./hosts/laptops/lenovo-ideapad-1/nix-box/configuration.nix
 		    home-manager.nixosModules.home-manager
 		    {
 		      home-manager = {
 		        useGlobalPkgs = true;
 			      useUserPackages = true;
             extraSpecialArgs = { inherit inputs; };
-			      users.scorpio = import ./hosts/nix-box/home.nix;
+			      users.scorpio = import ./hosts/laptops/lenovo-ideapad-1/nix-box/home.nix;
 			      backupFileExtension = "backup";
 		      };
 		    }
