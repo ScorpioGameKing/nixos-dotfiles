@@ -55,7 +55,6 @@
         enable = true;
         username = "scorpio";
         homeDirectory = "/home/scorpio";
-        stateVersion = "26.05";
       };
     };
     terminals = {

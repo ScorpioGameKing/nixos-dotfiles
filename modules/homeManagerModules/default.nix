@@ -231,10 +231,6 @@
                   type = lib.types.str;
                   default = "";
                 };
-                stateVersion = lib.mkOption {
-                  type = lib.types.str;
-                  default = "";
-                };
               };
             };
           };
