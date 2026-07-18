@@ -28,9 +28,9 @@
         qnud = "nix flake update niri-dotfiles-repo --flake ~/nixos-dotfiles";
         
         # Nix-Box Build Commands
-        qnrb = "lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
-        qnrbd = "qnud ; lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
-        qnrbf = "qnc ; qnud ; lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box";
+        qnrb = "lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box-lap-li-1";
+        qnrbd = "qnud ; lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box-lap-li-1";
+        qnrbf = "qnc ; qnud ; lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box-lap-li-1";
 
       };
       extraLogin = ''
