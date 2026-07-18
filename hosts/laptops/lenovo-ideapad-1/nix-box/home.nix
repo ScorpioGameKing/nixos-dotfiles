@@ -17,7 +17,7 @@
   # ---------------------------
 
   imports = [
-    ./../../../modules/homeManagerModules/default.nix
+    ./../../../../modules/homeManagerModules/default.nix
   ];
 
   # ---------------------------
