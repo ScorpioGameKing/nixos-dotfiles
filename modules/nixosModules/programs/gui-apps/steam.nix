@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    steam.enable = lib.mkEnableOption "enables steam";
-  };
+  options = { };
   
-  config = lib.mkIf config.steam.enable {
+  config = lib.mkIf config.nixos-modules.gui-apps.steam.enable {
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true;

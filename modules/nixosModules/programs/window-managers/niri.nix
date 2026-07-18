@@ -2,11 +2,9 @@
 
 {
 
-  options = {
-    niri.enable = lib.mkEnableOption "enables niri";
-  };
+  options = { };
   
-  config = lib.mkIf config.niri.enable {
+  config = lib.mkIf config.nixos-modules.window-managers.niri.enable {
     programs.niri = {
       enable = true;
     };

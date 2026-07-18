@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    cmake.enable = lib.mkEnableOption "enables cmake";
-  };
+  options = { };
   
-  config = lib.mkIf config.cmake.enable {
+  config = lib.mkIf config.nixos-modules.tools.cmake.enable {
     environment.systemPackages = with pkgs; [
       cmake
     ];

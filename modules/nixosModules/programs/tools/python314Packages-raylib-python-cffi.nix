@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    python314Packages-raylib-python-cffi.enable = lib.mkEnableOption "enables python314Packages.raylib-python-cffi (raylib for python 314)";
-  };
+  options = { };
   
-  config = lib.mkIf config.python314Packages-raylib-python-cffi.enable {
+  config = lib.mkIf config.nixos-modules.tools.python314Packages-raylib-python-cffi.enable {
     environment.systemPackages = with pkgs; [
       python314Packages.raylib-python-cffi
     ];

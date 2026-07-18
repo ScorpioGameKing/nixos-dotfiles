@@ -1,5 +1,10 @@
 { pkgs, ... }: {
-  fonts.packages = with pkgs; [
-    nerd-fonts.agave
-  ];
+
+  options = { };
+
+  config = lib.mkIf config.nixos-modules.system.font.enable {
+    fonts.packages = with pkgs; [
+      nerd-fonts.agave
+    ];
+  };
 }

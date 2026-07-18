@@ -28,12 +28,15 @@
   hm-modules = {
     enable = true;
     shells = {
+      enable = true;
       bash.enable = true;
     };
     terminals = {
+      enable = true;
       wezterm.enable = true;
     };
     tools = {
+      enable = true;
       eza.enable = true;
       fastfetch.enable = true;
       fuzzel.enable = true;
@@ -61,11 +64,13 @@
       waypaper.enable = true;
     };
     gui-apps = {
+      enable = true;
       brave.enable = true;
       equibop.enable = true;
       vscodium.enable = true;
     };
     resources = {
+      enable = true;
       gruvbox-wallpapers.enable = true;
     };
   };

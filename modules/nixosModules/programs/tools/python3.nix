@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    python3.enable = lib.mkEnableOption "enables python3";
-  };
+  options = { };
   
-  config = lib.mkIf config.python3.enable {
+  config = lib.mkIf config.nixos-modules.tools.python3.enable {
     environment.systemPackages = with pkgs; [
       python3
     ];

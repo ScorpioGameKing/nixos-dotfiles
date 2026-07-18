@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    xwayland-satellite.enable = lib.mkEnableOption "enables xwayland-satellite";
-  };
+  options = { };
   
-  config = lib.mkIf config.xwayland-satellite.enable {
+  config = lib.mkIf config.nixos-modules.desktop.xwayland-satellite.enable {
     environment.systemPackages = with pkgs; [
       xwayland-satellite
     ];

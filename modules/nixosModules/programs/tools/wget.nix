@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    wget.enable = lib.mkEnableOption "enables wget";
-  };
+  options = { };
   
-  config = lib.mkIf config.wget.enable {
+  config = lib.mkIf config.nixos-modules.tools.wget.enable {
     environment.systemPackages = with pkgs; [
       wget
     ];

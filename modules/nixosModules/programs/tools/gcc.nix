@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    gcc.enable = lib.mkEnableOption "enables gcc";
-  };
+  options = { };
   
-  config = lib.mkIf config.gcc.enable {
+  config = lib.mkIf config.nixos-modules.tools.gcc.enable {
     environment.systemPackages = with pkgs; [
       gcc
     ];

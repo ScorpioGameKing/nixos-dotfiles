@@ -2,11 +2,9 @@
 
 {
 
-  options = {
-    ly.enable = lib.mkEnableOption "enables ly";
-  };
+  options = { };
   
-  config = lib.mkIf config.ly.enable {
+  config = lib.mkIf config.nixos-modules.display-managers.ly.enable {
     services.displayManager.ly = {
       enable = true;
       settings = {

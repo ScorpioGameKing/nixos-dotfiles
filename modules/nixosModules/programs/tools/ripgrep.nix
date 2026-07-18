@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    ripgrep.enable = lib.mkEnableOption "enables ripgrep";
-  };
+  options = { };
   
-  config = lib.mkIf config.ripgrep.enable {
+  config = lib.mkIf config.nixos-modules.tools.ripgrep.enable {
     environment.systemPackages = with pkgs; [
       ripgrep
     ];

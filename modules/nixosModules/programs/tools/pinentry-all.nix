@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    pinentry-all.enable = lib.mkEnableOption "enables pinentry-all";
-  };
+  options = { };
   
-  config = lib.mkIf config.pinentry-all.enable {
+  config = lib.mkIf config.nixos-modules.tools.pinentry-all.enable {
     environment.systemPackages = with pkgs; [
       pinentry-all
     ];

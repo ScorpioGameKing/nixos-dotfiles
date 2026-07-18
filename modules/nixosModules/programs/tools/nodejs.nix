@@ -1,10 +1,8 @@
 { pkgs, lib, config, ... }: {
 
-  options = {
-    nodejs.enable = lib.mkEnableOption "enables nodejs";
-  };
+  options = { };
   
-  config = lib.mkIf config.nodejs.enable {
+  config = lib.mkIf config.nixos-modules.tools.nodejs.enable {
     environment.systemPackages = with pkgs; [
       nodejs
     ];
