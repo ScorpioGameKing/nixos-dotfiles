@@ -64,39 +64,39 @@
                       animation = lib.mkOption {
                         type = lib.types.str;
                         default = "colormix";
-                      };;
+                      };
                       cmatrix_min_codepoint = lib.mkOption {
                         type = lib.types.str;
                         default = "0x3000";
-                      };;
+                      };
                       cmatrix_max_codepoint = lib.mkOption {
                         type = lib.types.str;
                         default = "0x30FF";
-                      };;
+                      };
                       colormix_col1 = lib.mkOption {
                         type = lib.types.str;
                         default = "0x00282828";
-                      };;
+                      };
                       colormix_col2 = lib.mkOption {
                         type = lib.types.str;
                         default = "0x00504945";
-                      };;
+                      };
                       colormix_col3 = lib.mkOption {
                         type = lib.types.str;
                         default = "0x00EBDBB2";
-                      };;
+                      };
                       clock = lib.mkOption {
                         type = lib.types.str;
                         default = "%I:%M %p";
-                      };;
+                      };
                       box_title = lib.mkOption {
                         type = lib.types.str;
                         default = "NixOS";
-                      };;
+                      };
                       corner_top_left = lib.mkOption {
                         type = lib.types.str;
                         default = "shutdown,restart,britup,britdown,password,tty";
-                      };;
+                      };
                       corner_top_right = lib.mkOption {
                         type = lib.types.str;
                         default = "clock,battery,numlock,capslock";
