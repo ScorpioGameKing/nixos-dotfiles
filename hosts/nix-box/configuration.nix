@@ -68,13 +68,4 @@
       niri.enable = true;
     };
   };
-  # Tools
-  
-  # Display Managers
-  
-  # Window Managers
-  
-  # Desktop Enviroment
-  
-  # GUI Apps
 }
