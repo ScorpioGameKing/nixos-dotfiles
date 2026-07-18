@@ -212,6 +212,27 @@
     # --------------------------------------------------------------------
 
     # --------------------------------------------------------------------
+    # System Options
+    # --------------------------------------------------------------------
+
+    hm-modules.system = lib.mkOption {
+      type = lib.types.submodule {
+        options = {
+          enable = lib.mkEnableOption "enables system";
+          hm-settings = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables home manager settings";
+              };
+            };
+          };
+        };
+        config = lib.mkIf config.hm-modules.system.enable { };
+      };
+    };
+    # --------------------------------------------------------------------
+
+    # --------------------------------------------------------------------
     # Terminals Options
     # --------------------------------------------------------------------
 

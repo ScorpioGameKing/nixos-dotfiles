@@ -6,8 +6,6 @@
 
 - [Overview](#Overview)
     - [What Is This?](#What-Is-This?)
-    - [Current Features](#Current-Features)
-    - [Planned Features](#Planned-Features)
 - [Installing Dotfiles](#Installing-Dotfiles)
 - [Adding A New Host](#Adding-A-New-Host)
 - [Configuration](#Configuration)
@@ -30,15 +28,12 @@
 
 ### What Is This?
 
-
-
-### Current Features
-
-
-
-### Planned Features
-
-
+This aims to be an easily configurable, fully modular configuration system. The
+ultimate goal with the styling of this project is to provide a single point of 
+easy access to all relavant modules and their options. For users it allows for 
+a simple and easy to user configuration experience. For developers it allows 
+referencing the user's configuration options to enable or disable module features
+i.e. automatic `enable{SHELL}Integration` for modules based on enabled shell.
 
 ---
 
