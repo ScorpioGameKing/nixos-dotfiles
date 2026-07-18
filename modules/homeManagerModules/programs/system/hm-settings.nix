@@ -3,8 +3,8 @@
   options = { };
 
   config = lib.mkIf config.hm-modules.system.hm-settings.enable {
-      home.username = "scorpio";
-      home.homeDirectory = "/home/scorpio";
-      home.stateVersion = "26.05";
+      home.username = config.hm-modules.system.hm-settings.username;
+      home.homeDirectory = config.hm-modules.system.hm-settings.homeDirectory;
+      home.stateVersion = config.hm-modules.system.hm-settings.stateVersion;
   };
 }

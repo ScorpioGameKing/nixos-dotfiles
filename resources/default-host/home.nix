@@ -70,6 +70,12 @@
       bash.enable = false;
       nushell.enable = false;
     };
+
+    system = {
+      enable = false;
+
+      hm-settings.enable = false;
+    };
     
     terminals = {
       enable = false;

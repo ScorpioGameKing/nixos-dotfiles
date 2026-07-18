@@ -223,6 +223,18 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables home manager settings";
+                username = lib.mkOption {
+                  type = lib.types.str;
+                  default = "";
+                };
+                homeDirectory = lib.mkOption {
+                  type = lib.types.str;
+                  default = "";
+                };
+                stateVersion = lib.mkOption {
+                  type = lib.types.str;
+                  default = "26.05";
+                };
               };
             };
           };

@@ -6,14 +6,6 @@
 
 {
   # ---------------------------
-  # Home Manager Options
-  # ---------------------------
-
-  home.username = "scorpio";
-  home.homeDirectory = "/home/scorpio";
-  home.stateVersion = "26.05";
-
-  # ---------------------------
   # Import Module Groups
   # ---------------------------
 
@@ -27,26 +19,6 @@
 
   hm-modules = {
     enable = true;
-    shells = {
-      enable = true;
-      bash.enable = true;
-    };
-    terminals = {
-      enable = true;
-      wezterm.enable = true;
-    };
-    tools = {
-      enable = true;
-      eza.enable = true;
-      fastfetch.enable = true;
-      fuzzel.enable = true;
-      fzf.enable = true;
-      gpg.enable = true;
-      git.enable = true;
-      gh.enable = true;
-      nix-search-tv.enable = true;
-      zoxide.enable = true;
-    };
     cli-apps = {
       enable = true;
       lazygit.enable = true;
@@ -72,6 +44,34 @@
     resources = {
       enable = true;
       gruvbox-wallpapers.enable = true;
+    };
+    shells = {
+      enable = true;
+      bash.enable = true;
+    };
+    system = {
+      enable = true;
+      hm-settings = {
+        enable = true;
+        username = "scorpio";
+        homeDirectory = "/home/scorpio";
+      };
+    };
+    terminals = {
+      enable = true;
+      wezterm.enable = true;
+    };
+    tools = {
+      enable = true;
+      eza.enable = true;
+      fastfetch.enable = true;
+      fuzzel.enable = true;
+      fzf.enable = true;
+      gpg.enable = true;
+      git.enable = true;
+      gh.enable = true;
+      nix-search-tv.enable = true;
+      zoxide.enable = true;
     };
   };
 }
