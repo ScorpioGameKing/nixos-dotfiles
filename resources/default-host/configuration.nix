@@ -22,21 +22,29 @@
 
   nixos-modules = {
     enable = true;
+
     desktop = {
       enable = true;
+
       nb-stylix.enable = true;
       xwayland-satellite.enable = true;
     };
+
     display-managers = {
       enable = true;
+
       ly.enable = true;
     };
+    
     gui-apps = {
       enable = true;
+
       steam.enable = true;
     };
+
     system = {
       enable = true;
+
       boot.enable = true;
       font.enable = true;
       hardware.enable = true;
@@ -46,8 +54,10 @@
       services.enable = true;
       time.enable = true;
     };
+
     tools = {
       enable = true;
+
       cmake.enable = true;
       gcc.enable = true;
       nodejs.enable = true;
@@ -59,12 +69,16 @@
       tree-sitter.enable = true;
       wget.enable = true;
     };
+
     users = {
       enable = true;
+
       scorpio.enable = true;
     };
+
     window-managers = {
       enable = true;
+
       niri.enable = true;
     };
   };

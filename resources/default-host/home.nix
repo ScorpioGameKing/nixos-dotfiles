@@ -6,12 +6,10 @@
 
 {
   # ---------------------------
-  # Home Manager Options
+  # We Dont't Touch stateVersion
   # ---------------------------
-
-  home.username = "scorpio";
-  home.homeDirectory = "/home/scorpio";
   home.stateVersion = "26.05";
+  # ---------------------------
 
   # ---------------------------
   # Import Module Groups
@@ -74,7 +72,12 @@
     system = {
       enable = false;
 
-      hm-settings.enable = false;
+      hm-settings = {
+        enable = false;
+
+        username = "";
+        homeDirectory = "";
+      };
     };
     
     terminals = {

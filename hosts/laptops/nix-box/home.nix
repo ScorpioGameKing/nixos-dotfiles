@@ -5,20 +5,19 @@
 { ... }:
 
 {
-  
+
   # ---------------------------
   # We Dont't Touch stateVersion
   # ---------------------------
   home.stateVersion = "26.05";
   # ---------------------------
 
-
   # ---------------------------
   # Import Module Groups
   # ---------------------------
 
   imports = [
-    ./../../modules/homeManagerModules/default.nix
+    ./../../../modules/homeManagerModules/default.nix
   ];
 
   # ---------------------------

@@ -12,8 +12,8 @@
 
   imports =
     [ 
-      ./hardware-configuration.nix
-      ./../../modules/nixosModules/default.nix
+      ./../../../systems/laptops/lenovo-ideapad-1/hardware-configuration.nix
+      ./../../../modules/nixosModules/default.nix
     ];
   
   # ---------------------------

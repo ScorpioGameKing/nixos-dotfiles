@@ -47,7 +47,7 @@
 	    system = "x86_64-linux";
 	    modules = [
         stylix.nixosModules.stylix
-	      ./hosts/nix-box/configuration.nix
+	      ./hosts/laptops/nix-box/configuration.nix
 		    home-manager.nixosModules.home-manager
 		    {
 		      home-manager = {
