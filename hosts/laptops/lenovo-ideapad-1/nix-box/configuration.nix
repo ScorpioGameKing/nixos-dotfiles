@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box Configs
 # -------------------------
 
-{ ... }:
+{ pkgs, ... }:
 
 {
 
@@ -24,7 +24,11 @@
     enable = true;
     desktop = {
       enable = true;
-      nb-stylix.enable = true;
+      nb-stylix = {
+        enable = true;
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+        autoEnable = true;
+      };
       xwayland-satellite.enable = true;
     };
     display-managers = {

@@ -25,6 +25,14 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables nb-stylix";
+                base16Scheme = lib.mkOption {
+                  type = lib.types.str;
+                  default = "";
+                };
+                autoEnable = lib.mkOption {
+                  type = lib.types.bool;
+                  default = false;
+                };
               };
             };
           };
