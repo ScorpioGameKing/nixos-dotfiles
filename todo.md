@@ -21,6 +21,7 @@
     - obsidian
     - libre office
     - open office
+    - rofi
 - Work on `readme.md`
 - Port more configs into native nix
 - More Resources (Possibly repack into smaller forked sources)
