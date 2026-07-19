@@ -95,7 +95,7 @@
         x_cmd = "$PREFIX_DIRECTORY/bin/X";
         x_vt = "null";
         xauth_cmd = "$PREFIX_DIRECTORY/bin/xauth";
-        xinitrc = ~/.xinitrc;
+        #xinitrc = ~/.xinitrc;
         xsessions = "$PREFIX_DIRECTORY/share/xsessions";
       };
     };
