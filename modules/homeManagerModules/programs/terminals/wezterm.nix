@@ -13,9 +13,9 @@ in
     home.packages = with pkgs; [
       wezterm
     ];
-    #programs.wezterm = {
-    #  enable = true;
-    #};
+    programs.wezterm = {
+      enable = true;
+    };
     xdg.configFile.wezterm = {
       source = create_symlink "${niri-dotfiles-repo}/.config/wezterm";
       recursive = true;
