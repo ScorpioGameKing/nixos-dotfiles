@@ -43,7 +43,7 @@
     # configs for my laptop.
     # -------------------------
 
-	  nixosConfigurations.nix-box-lap-li-1 = nixpkgs.lib.nixosSystem {
+	  packages.x86_64-linux.nixosConfigurations.nix-box-lap-li-1 = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
 	    modules = [
         stylix.nixosModules.stylix
