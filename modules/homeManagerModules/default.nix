@@ -241,7 +241,7 @@
                 settings = lib.mkOption {
                   type = lib.types.submodule {
                     options = {
-                      automount = lib.mkEnableOption "enables automaounting";
+                      automount = lib.mkEnableOption "enables automounting";
                       notify = lib.mkEnableOption "enables notifications";
                     };
                   };
