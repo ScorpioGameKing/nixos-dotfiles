@@ -17,7 +17,7 @@ in
       enable = true;
     };
     xdg.configFile.wezterm = {
-      source = create_symlink "${niri-dotfiles-repo}/.config/wezterm";
+      source = create_symlink "${niri-dotfiles-repo}/.config/wezterm/*";
       recursive = true;
     };
   };
