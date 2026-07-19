@@ -16,7 +16,7 @@ in
     ];
 
     xdg.configFile.yazi = {
-      source = create_symlink "${niri-dotfiles-repo}/.config/yazi/*";
+      source = create_symlink "${niri-dotfiles-repo}/.config/yazi/";
       recursive = true;
     };
     
