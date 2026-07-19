@@ -63,6 +63,14 @@
         username = "scorpio";
         homeDirectory = "/home/scorpio";
       };
+      udiskie = {
+        enable = true;
+        settings = {
+          automount = true;
+          notify = false;
+        };
+      };
+      udisks2.enable = true;
     };
     terminals = {
       enable = true;

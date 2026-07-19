@@ -234,6 +234,28 @@
               };
             };
           };
+          udiskie = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables udiskie";
+                settings = lib.mkOption {
+                  type = lib.types.submodule {
+                    options = {
+                      automount = lib.mkEnableOption "enables automaounting";
+                      notify = lib.mkEnableOption "enables notifications";
+                    };
+                  };
+                };
+              };
+            };
+          };
+          udisks2 = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables udisks2";
+              };
+            };
+          };
         };
         config = lib.mkIf config.hm-modules.system.enable { };
       };
