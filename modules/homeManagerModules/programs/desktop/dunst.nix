@@ -2,7 +2,7 @@
   
   options = { };
 
-  config = lib.mkIf config.hm-modules.system.dunst.enable {
+  config = lib.mkIf config.hm-modules.desktop.dunst.enable {
     home.packages = with pkgs; [
       dunst
     ];
