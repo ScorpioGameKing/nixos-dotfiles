@@ -121,13 +121,6 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables gui-apps";
-          libreoffice = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables libreoffice";
-              };
-            };
-          };
           steam = lib.mkOption {
             type = lib.types.submodule {
               options = {
