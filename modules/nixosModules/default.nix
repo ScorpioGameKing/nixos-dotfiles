@@ -208,7 +208,7 @@
                 experimental-features = lib.mkOption {
                   type = lib.listOf lib.types.str {
                     default = [ "nix-command" "flakes" ];
-                  }
+                  };
                 };
               };
             };
