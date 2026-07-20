@@ -177,7 +177,7 @@
               options = {
                 enable = lib.mkEnableOption "enables hardware";
                 graphics = lib.mkOption {
-                  type = lib.submodule {
+                  type = lib.types.submodule {
                     options = {
                       enable = lib.mkEnableOption "enables hardware graphics";
                       enable32Bit = lib.mkEnableOption "enables 32 bit graphics";
