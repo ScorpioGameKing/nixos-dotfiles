@@ -350,6 +350,9 @@
           enable32Bit = true;
         };
       };
+      nix-settings = {
+        enable = true;
+      }
     };
   };
 }
