@@ -218,6 +218,8 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables services";
+                printing.enable = lib.mkEnableOption "enables printing";
+                libinput.enable = lib.mkEnableOption "enables libinput";
               };
             };
           };
@@ -372,6 +374,8 @@
       };
       services = {
         enable = true;
+        printing.enable = true;
+        libinput.enable = true;
       };
       time = {
         enable = true;

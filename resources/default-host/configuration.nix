@@ -6,6 +6,12 @@
 
 {
 
+  # ---------------------------
+  # We Dont't Touch stateVersion
+  # ---------------------------
+  system.stateVersion = "26.05";
+  # ---------------------------
+
   # -------------------------
   # Import Module Groups
   # -------------------------
@@ -25,74 +31,95 @@
 
     desktop = {
       enable = true;
-
-      nb-stylix.enable = true;
+      nb-stylix = {
+        enable = true;
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+        autoEnable = true;
+      };
       xwayland-satellite.enable = true;
     };
 
     display-managers = {
       enable = true;
-
-      ly = {
+      ly {
         enable = true;
-        settings = {
-          animation = "colormix";
-          cmatrix_min_codepoint = "0x3000";
-          cmatrix_max_codepoint = "0x30FF";
-          colormix_col1 = "0x00282828";
-          colormix_col2 = "0x00504945";
-          colormix_col3 = "0x00EBDBB2";
-          clock = "%I:%M %p";
-          box_title = "NixOS";
-          corner_top_left = "shutdown,restart,britup,britdown,password,tty";
-          corner_top_right = "clock,battery,numlock,capslock";
-        };
+        animation = "colormix";
+        cmatrix_min_codepoint = "0x3000";
+        cmatrix_max_codepoint = "0x30FF";
+        colormix_col1 = "0x00282828";
+        colormix_col2 = "0x00504945"; 
+        colormix_col3 = "0x00EBDBB2";
+        clock = "%I:%M %p";
+        box_title = "NixOS";
+        corner_top_left = "shutdown,restart,britup,britdown,password,tty";
+        corner_top_right = "clock,battery,numlock,capslock";
       };
     };
-    
+
     gui-apps = {
       enable = true;
-
       steam.enable = true;
-    };
-
-    system = {
-      enable = true;
-
-      boot.enable = true;
-      font.enable = true;
-      hardware.enable = true;
-      networking.enable = true;
-      nix-settings.enable = true;
-      security.enable = true;
-      services.enable = true;
-      time.enable = true;
     };
 
     tools = {
       enable = true;
-
       cmake.enable = true;
       gcc.enable = true;
-      nodejs.enable = true;
       pinentry-all.enable = true;
-      python3.enable = true;
-      python314Packages-colorama.enable = true;
-      python314Packages-raylib-python-cffi.enable = true;
       ripgrep.enable = true;
       tree-sitter.enable = true;
       wget.enable = true;
     };
 
+    system = {
+      enable = true;
+      boot = {
+        enable = true;
+        settings = {
+          systemd-boot.enabled = true;
+          canTouchEfiVariables = true;
+          systemd-boot.configurationLimit = 20;
+          kernelPackages = pkgs.linuxPackages_latest
+        };
+      };
+      font = {
+        enable = true;
+      };
+      hardware = {
+        enable = true;
+        graphics = {
+          enable = true;
+          enable32Bit = true;
+        };
+      };
+      networking = {
+        enable = true;
+        networkmanager.enable = true; 
+      };
+      nix-settings = {
+        enable = true;
+        allowUnfree = true;
+      };
+      security = {
+        enable = true;
+      };
+      services = {
+        enable = true;
+        printing.enable = true;
+        libinput.enable = true;
+      };
+      time = {
+        enable = true;
+      };
+    };
+
     users = {
       enable = true;
-
       scorpio.enable = true;
     };
 
     window-managers = {
       enable = true;
-
       niri.enable = true;
     };
   };

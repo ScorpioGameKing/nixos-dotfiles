@@ -53,7 +53,6 @@
       enable = true;
       cmake.enable = true;
       gcc.enable = true;
-      #nodejs.enable = true;
       pinentry-all.enable = true;
       ripgrep.enable = true;
       tree-sitter.enable = true;
