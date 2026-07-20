@@ -149,13 +149,13 @@
                 settings = lib.mkOption {
                   type = lib.types.submodule {
                     options = {
-                      systemd-boot-enabled = lib.mkEnableOption "enables systemd boot";
-                      touchEfiVariables = lib.mkEnableOption "enables canTouchEfiVariables";
-                      systemd-boot-config-limit = lib.mkOption {
+                      systemd-boot.enabled = lib.mkEnableOption "enables systemd boot";
+                      canTouchEfiVariables = lib.mkEnableOption "enables canTouchEfiVariables";
+                      systemd-boot.configurationLimit = lib.mkOption {
                         type = lib.types.int;
                         default = 20;
                       };
-                      kernelPkgs = lib.mkOption {
+                      kernelPackages = lib.mkOption {
                         type = lib.types.raw;
                         default = pkgs.linuxPackages_latest;
                       };
@@ -225,8 +225,8 @@
         };
         config = lib.mkIf config.nixos-modules.system.enable { 
           boot.settings = {
-            systemd-boot-enabled = true;
-            touchEfiVariables = true;
+            systemd-boot.enabled = true;
+            canTouchEfiVariables = true;
           };
           hardware.graphics = {
             enable = true;
