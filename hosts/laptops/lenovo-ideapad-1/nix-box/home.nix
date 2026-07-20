@@ -44,7 +44,7 @@
     };
     gui-apps = {
       enable = true;
-      brave.enable = false;
+      brave.enable = true;
       equibop.enable = true;
       vscodium.enable = true;
     };
