@@ -5,7 +5,7 @@
     ];
     programs.foot = {
       enable = true;
-      enableBashIntegration = config.hm-modules.shells.bash.enable;
+      enableBashIntegration = true;
     };
   };
 }
