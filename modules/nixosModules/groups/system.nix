@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./../system/appimage.nix
     ./../system/boot.nix
     ./../system/hardware.nix
     ./../system/networking.nix

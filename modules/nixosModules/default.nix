@@ -121,6 +121,13 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables gui-apps";
+          libreoffice = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables libreoffice";
+              };
+            };
+          };
           steam = lib.mkOption {
             type = lib.types.submodule {
               options = {
@@ -142,6 +149,13 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables system";
+          appimage = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables appimages";
+              };
+            };
+          };
           boot = lib.mkOption {
             type = lib.types.submodule {
               options = {
@@ -344,6 +358,9 @@
   config = lib.mkIf config.nixos-modules.enable { 
     nixos-modules.system = {
       enable = true;
+      appimage = {
+        enable = true;
+      };
       boot = {
         enable = true;
         settings = {
