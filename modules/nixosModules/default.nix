@@ -223,16 +223,7 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.system.enable { 
-          boot.settings = {
-            systemd-boot.enabled = true;
-            canTouchEfiVariables = true;
-          };
-          hardware.graphics = {
-            enable = true;
-            enable32Bit = true;
-          };
-        };
+        config = lib.mkIf config.nixos-modules.system.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -343,6 +334,22 @@
   };
   # --------------------------------------------------------------------
   config = lib.mkIf config.nixos-modules.enable { 
-    nixos-modules.system.enable = true;
+    nixos-modules.system = {
+      enable = true;
+      boot = {
+        enable = true;
+        settings = {
+          systemd-boot.enabled = true;
+          canTouchEfiVariables = true;
+        };
+      };
+      hardware = {
+        enable = true;
+        graphics = {
+          enable = true;
+          enable32Bit = true;
+        };
+      };
+    };
   };
 }
