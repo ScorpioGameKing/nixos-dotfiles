@@ -46,7 +46,7 @@
       enable = true;
       brave.enable = true;
       equibop.enable = true;
-      libreoffice-qt = true;
+      libreoffice-qt.enable = true;
       vscodium.enable = true;
     };
     resources = {
