@@ -156,10 +156,10 @@
               };
             };
           };
-          libreoffice-qt = lib.mkOption {
+          libreoffice = lib.mkOption {
             type = lib.types.submodule {
               options = {
-                enable = lib.mkEnableOption "enables libreoffice-qt";
+                enable = lib.mkEnableOption "enables libreoffice";
               };
             };
           };
