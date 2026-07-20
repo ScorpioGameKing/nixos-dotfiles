@@ -180,11 +180,11 @@
     "niri-dotfiles-repo": {
       "flake": false,
       "locked": {
-        "lastModified": 1784505598,
-        "narHash": "sha256-GOKapThrEsOO8JkXEn7HPfR2mjFs2qVs7qEqjfKVJco=",
+        "lastModified": 1784551206,
+        "narHash": "sha256-BGYI3l7jS4uqfsmrI+CTMWk4sipmn/AJySEncQEMRZ0=",
         "owner": "ScorpioGameKing",
         "repo": "Niri-Dotfiles",
-        "rev": "ca3563920b968c8cd98029909d52a0229dc731b7",
+        "rev": "67d29a0744970fe49f6e0c9b702bfaa66f549f75",
         "type": "github"
       },
       "original": {
