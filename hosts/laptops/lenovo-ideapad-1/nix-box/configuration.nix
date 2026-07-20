@@ -49,27 +49,11 @@
       steam.enable = true;
     };
 
-    /*
-    system = {
-      enable = true;
-
-      boot.enable = true;
-      font.enable = true;
-      hardware.enable = true;
-      networking.enable = true;
-      nix-settings.enable = true;
-      security.enable = true;
-      services.enable = true;
-      time.enable = true;
-    };
-    */
-
     tools = {
       enable = true;
-
       cmake.enable = true;
       gcc.enable = true;
-      nodejs.enable = true;
+      #nodejs.enable = true;
       pinentry-all.enable = true;
       ripgrep.enable = true;
       tree-sitter.enable = true;
@@ -78,13 +62,11 @@
 
     users = {
       enable = true;
-
       scorpio.enable = true;
     };
 
     window-managers = {
       enable = true;
-
       niri.enable = true;
     };
   };
