@@ -176,6 +176,14 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables hardware";
+                graphics = lib.mkOption {
+                  type = lib.submodule {
+                    options = {
+                      enable = lib.mkEnableOption "enables hardware graphics";
+                      enable32Bit = lib.mkEnableOption "enables 32 bit graphics";
+                    };
+                  };
+                };
               };
             };
           };
@@ -216,8 +224,14 @@
           };
         };
         config = lib.mkIf config.nixos-modules.system.enable { 
-          boot.settings.systemd-boot-enabled = true;
-          boot.settings.touchEfiVariables = true;
+          boot.settings = {
+            systemd-boot-enabled = true;
+            touchEfiVariables = true;
+          };
+          hardware.graphics = {
+            enable = true;
+            enable32Bit = true;
+          };
         };
       };
     };
