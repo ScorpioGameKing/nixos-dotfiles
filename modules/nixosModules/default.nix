@@ -339,6 +339,14 @@
               };
             };
           };
+          hyprland = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables hyprland";
+                xwayland.enable = lib.mkEnableOption "enables xwayland support";
+              };
+            };
+          };
         };
       };
     };

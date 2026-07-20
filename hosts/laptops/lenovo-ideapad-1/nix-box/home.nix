@@ -36,12 +36,13 @@
     };
     desktop = {
       enable = true;
+      hyprpaper.enable = true;
+      mako.enable = true;
       quickshell.enable = true;
       swaybg.enable = true;
       swaylock.enable = true;
       waybar.enable = true;
       waypaper.enable = true;
-      mako.enable = true;
     };
     gui-apps = {
       enable = true;
