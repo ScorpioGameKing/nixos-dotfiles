@@ -191,6 +191,12 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables networking";
+                hostName = lib.mkOption {
+                  type = lib.types.str {
+                    default = "NixOS";
+                  };
+                  networkmanager.enable = lib.mkEnableOption "enables network manager";
+                };
               };
             };
           };
@@ -198,6 +204,12 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables nix-settings";
+                allowUnfree = lib.mkEnableOption "allows for liscened packages";
+                experimental-features = lib.mkOption {
+                  type = lib.listOf lib.types.str {
+                    default = [ "nix-command" "flakes" ];
+                  }
+                };
               };
             };
           };
@@ -343,6 +355,9 @@
           canTouchEfiVariables = true;
         };
       };
+      font = {
+        enable = true;
+      };
       hardware = {
         enable = true;
         graphics = {
@@ -350,7 +365,21 @@
           enable32Bit = true;
         };
       };
+      networking = {
+        enable = true;
+        networkmanager.enable = true; 
+      };
       nix-settings = {
+        enable = true;
+        allowUnfree = true;
+      };
+      security = {
+        enable = true;
+      };
+      services = {
+        enable = true;
+      };
+      time = {
         enable = true;
       };
     };

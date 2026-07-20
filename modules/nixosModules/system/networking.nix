@@ -3,7 +3,7 @@
   options = { };
 
   config = lib.mkIf config.nixos-modules.system.networking.enable {
-    networking.hostName = "nix-box"; 
-    networking.networkmanager.enable = true;
+    networking.hostName = config.nixos-modules.system.networking.hostName; 
+    networking.networkmanager.enable = config.nixos-modules.system.networking.networkmanager.enable;
   };
 }
