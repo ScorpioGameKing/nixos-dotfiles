@@ -19,9 +19,10 @@
     - localsend/kdeconnect
     - dolphin (or similar file manager)
     - obsidian
-    - libre office
     - open office
     - rofi
+    - fish
+    - zsh
 - Work on `readme.md`
 - Port more configs into native nix
 - More Resources (Possibly repack into smaller forked sources)

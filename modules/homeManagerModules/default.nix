@@ -255,17 +255,24 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables terminals";
-          wezterm = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables wezterm";
-              };
-            };
-          };
           alacritty = lib.mkOption {
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables alacritty";
+              };
+            };
+          };
+          kitty = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables kitty";
+              };
+            };
+          };
+          wezterm = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables wezterm";
               };
             };
           };
