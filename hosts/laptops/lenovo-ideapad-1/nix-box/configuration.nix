@@ -43,6 +43,7 @@
       steam.enable = true;
     };
 
+    /*
     system = {
       enable = true;
 
@@ -55,6 +56,7 @@
       services.enable = true;
       time.enable = true;
     };
+    */
 
     tools = {
       enable = true;
