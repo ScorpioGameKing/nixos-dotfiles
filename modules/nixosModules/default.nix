@@ -192,9 +192,8 @@
               options = {
                 enable = lib.mkEnableOption "enables networking";
                 hostName = lib.mkOption {
-                  type = lib.types.str {
-                    default = "NixOS";
-                  };
+                  type = lib.types.str;
+                  default = "NixOS";
                 };
                 networkmanager.enable = lib.mkEnableOption "enables network manager";
               };
