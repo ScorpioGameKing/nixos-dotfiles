@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box Configs
 # -------------------------
 
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
 {
 
