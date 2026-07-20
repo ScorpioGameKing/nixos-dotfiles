@@ -24,7 +24,7 @@
       url = "github:AngelJumbo/gruvbox-wallpapers";
     };
     niri-dotfiles-repo = {
-      url = "github:ScorpioGameKing/Niri-Dotfiles/master";
+      url = "github:ScorpioGameKing/nixos-dotfiles-repo/main";
       flake = false;
     };
   };
