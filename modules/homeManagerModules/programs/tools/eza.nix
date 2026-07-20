@@ -1,7 +1,4 @@
 { pkgs, lib, config, ... }: {
-  
-  options = { };
-
   config = lib.mkIf config.hm-modules.tools.eza.enable {
     home.packages = with pkgs; [
       eza

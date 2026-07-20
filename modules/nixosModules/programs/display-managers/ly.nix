@@ -1,9 +1,4 @@
-{ lib, config, ... }: 
-
-{
-
-  options = { };
-  
+{ lib, config, ... }: {
   config = lib.mkIf config.nixos-modules.display-managers.ly.enable {
     services.displayManager.ly = {
       enable = true;

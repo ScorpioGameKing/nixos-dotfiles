@@ -1,7 +1,4 @@
 { pkgs, lib, config, ... }: {
-  
-  options = { };
-
   config = lib.mkIf config.hm-modules.cli-apps.television.enable {
     home.packages = with pkgs; [
       television

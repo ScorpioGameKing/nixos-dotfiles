@@ -1,7 +1,4 @@
 { pkgs, lib, config, ... }: {
-
-  options = { };
-  
   config = lib.mkIf config.nixos-modules.gui-apps.steam.enable {
     programs.steam = {
       enable = true;
