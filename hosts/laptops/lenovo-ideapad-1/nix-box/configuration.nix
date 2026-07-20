@@ -26,6 +26,10 @@
   # Module Configuration
   # ---------------------------
 
+  enviroment.systemPackages = with pkgs; [
+      libreoffice
+    ];
+
   nixos-modules = {
     enable = true;
 
@@ -46,7 +50,7 @@
 
     gui-apps = {
       enable = true;
-      libreoffice.enable = true;
+      #libreoffice.enable = true;
       steam.enable = true;
     };
 
