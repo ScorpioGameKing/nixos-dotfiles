@@ -206,7 +206,7 @@
                 enable = lib.mkEnableOption "enables nix-settings";
                 allowUnfree = lib.mkEnableOption "allows for liscened packages";
                 experimental-features = lib.mkOption {
-                  type = lib.types.listOf lib.types.str {
+                  type = lib.types.enum {
                     default = [ "nix-command" "flakes" ];
                   };
                 };
