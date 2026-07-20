@@ -156,7 +156,7 @@
                         default = 20;
                       };
                       kernelPkgs = lib.mkOption {
-                        type = lib.types.package;
+                        type = lib.types.str;
                         default = pkgs.linuxPackages_latest;
                       };
                     };
