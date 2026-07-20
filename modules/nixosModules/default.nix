@@ -1,12 +1,13 @@
 { pkgs, lib, config, ...}: {
   imports = [
-      ./groups/system.nix
-      ./groups/users.nix
-      ./groups/display-managers.nix
-      ./groups/window-managers.nix
-      ./groups/gui-apps.nix
       ./groups/desktop.nix
+      ./groups/display-managers.nix
+      ./groups/gui-apps.nix
+      ./groups/system.nix
+      ./groups/terminals.nix
       ./groups/tools.nix
+      ./groups/users.nix
+      ./groups/window-managers.nix
   ];
   options = {
     nixos-modules.enable = lib.mkEnableOption "enables NixOS Modules";
@@ -37,7 +38,6 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.desktop.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -101,7 +101,6 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.display-managers.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -126,7 +125,6 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.gui-apps.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -232,7 +230,23 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.system.enable { };
+      };
+    };
+    # --------------------------------------------------------------------
+    # Terminals Options
+    # --------------------------------------------------------------------
+    nixos-modules.terminals = lib.mkOption {
+      type = lib.types.submodule {
+        options = {
+          enable = lib.mkEnableOption "enables terminals";
+          foot = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables foot";
+              };
+            };
+          };
+        };
       };
     };
     # --------------------------------------------------------------------
@@ -292,7 +306,6 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.tools.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -310,7 +323,6 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.users.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -328,7 +340,6 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.window-managers.enable { };
       };
     };
   };

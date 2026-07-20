@@ -4,7 +4,6 @@
 
 - Create more package modules
     - micro 
-    - kitty
     - mpv
     - mpc
     - smplayer ?

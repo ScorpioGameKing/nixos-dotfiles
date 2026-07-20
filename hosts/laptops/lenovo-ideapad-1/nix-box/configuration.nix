@@ -50,6 +50,11 @@
       steam.enable = true;
     };
 
+    terminals = {
+      enable = true;
+      foot.enable = true;
+    };
+
     tools = {
       enable = true;
       cmake.enable = true;
