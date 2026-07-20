@@ -26,8 +26,8 @@
               options = {
                 enable = lib.mkEnableOption "enables nb-stylix";
                 base16Scheme = lib.mkOption {
-                  type = lib.types.str;
-                  default = "";
+                  type = lib.types.path;
+                  default = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
                 };
                 autoEnable = lib.mkEnableOption "enables autoEnable";
               };
@@ -146,6 +146,22 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables boot";
+                settings = lib.mkOption {
+                  type = lib.types.submodule {
+                    options = {
+                      systemd-boot-enabled = lib.mkEnableOption "enables systemd boot";
+                      touchEfiVariables = lib.mkEnableOption "enables canTouchEfiVariables";
+                      systemd-boot-config-limit = lib.mkOption {
+                        type = lib.types.int;
+                        default = 20
+                      };
+                      kernelPkgs = lib.mkOption {
+                        type = lib.types.package;
+                        default = pkgs.linuxPackages_latest;
+                      };
+                    };
+                  };
+                };
               };
             };
           };
@@ -199,7 +215,10 @@
             };
           };
         };
-        config = lib.mkIf config.nixos-modules.system.enable { };
+        config = lib.mkIf config.nixos-modules.system.enable { 
+          systemd-boot-enabled = true;
+          touchEfiVariables = true;
+        };
       };
     };
     # --------------------------------------------------------------------
