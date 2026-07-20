@@ -9,7 +9,7 @@
         name = "Agave Nerd Font Mono";
         size = 13;
       };
-      shellIntegrations = {
+      shellIntegration = {
         enableBashIntegration = config.hm-modules.shells.bash.enable;
       };
     };
