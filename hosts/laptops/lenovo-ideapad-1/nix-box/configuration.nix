@@ -26,6 +26,10 @@
   # Module Configuration
   # ---------------------------
 
+  environment.systemPackages = with pkgs; [
+      libreoffice
+    ];
+
   nixos-modules = {
     enable = true;
 
