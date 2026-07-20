@@ -156,13 +156,6 @@
               };
             };
           };
-          libreoffice = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables libreoffice";
-              };
-            };
-          };
           vscodium = lib.mkOption {
             type = lib.types.submodule {
               options = {
