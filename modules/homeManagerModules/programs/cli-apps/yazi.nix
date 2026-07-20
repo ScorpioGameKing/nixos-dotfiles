@@ -1,7 +1,7 @@
 { pkgs, lib, config, inputs, ...  }: 
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-  inherit (inputs) niri-dotfiles-repo;
+  inherit (inputs) nixos-dotfiles-repo;
 in
 {
   config = lib.mkIf config.hm-modules.cli-apps.yazi.enable {
@@ -9,7 +9,7 @@ in
       yazi
     ];
     xdg.configFile.yazi = {
-      source = create_symlink "${niri-dotfiles-repo}/.config/yazi/";
+      source = create_symlink "${nixos-dotfiles-repo}/.config/yazi/";
       recursive = true;
     }; 
     programs.yazi = {

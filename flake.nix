@@ -23,7 +23,7 @@
     gruvbox-wallpapers = {
       url = "github:AngelJumbo/gruvbox-wallpapers";
     };
-    niri-dotfiles-repo = {
+    nixos-dotfiles-repo = {
       url = "github:ScorpioGameKing/nixos-dotfiles-repo/main";
       flake = false;
     };

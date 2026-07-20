@@ -1,7 +1,7 @@
 { pkgs, lib, config, inputs, ... }: 
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-  inherit (inputs) niri-dotfiles-repo;
+  inherit (inputs) nixos-dotfiles-repo;
 in
 {
   config = lib.mkIf config.hm-modules.desktop.swaylock.enable {
@@ -9,7 +9,7 @@ in
       swaylock
     ];
     xdg.configFile.swaylock = {
-      source = create_symlink "${niri-dotfiles-repo}/.config/swaylock";
+      source = create_symlink "${nixos-dotfiles-repo}/.config/swaylock";
       recursive = true;
     };
   };

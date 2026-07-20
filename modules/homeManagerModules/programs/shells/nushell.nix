@@ -22,7 +22,7 @@
 
         # General NixOS Commands
         qnc = "nix-collect-garbage -d";
-        qnud = "nix flake update niri-dotfiles-repo --flake ~/nixos-dotfiles";
+        qnud = "nix flake update nixos-dotfiles-repo --flake ~/nixos-dotfiles";
         
         # Nix-Box Build Commands
         qnrb = "lg ~/nixos-dotfiles ; sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nix-box-lap-li-1";
