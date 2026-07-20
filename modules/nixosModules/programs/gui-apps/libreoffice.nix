@@ -2,7 +2,7 @@
 
   options = { };
   
-  config = lib.mkIf config.nixos-modules.tools.libreoffice.enable {
+  config = lib.mkIf config.nixos-modules.gui-apps.libreoffice.enable {
     environment.systemPackages = with pkgs; [
       libreoffice
     ];
