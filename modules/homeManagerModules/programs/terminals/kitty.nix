@@ -5,6 +5,13 @@
     ];
     programs.kitty = {
       enable = true;
+      font = {
+        name = "Agave Nerd Font Mono";
+        size = 13;
+      };
+      shellIntegrations = {
+        enableBashIntegration = config.hm-modules.shells.bash.enable;
+      };
     };
   };
 }
