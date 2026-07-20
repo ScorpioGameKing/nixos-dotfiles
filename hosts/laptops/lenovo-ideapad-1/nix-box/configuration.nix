@@ -46,7 +46,7 @@
 
     gui-apps = {
       enable = true;
-      libreoffice.enable = true;
+      #libreoffice.enable = true;
       steam.enable = true;
     };
 
