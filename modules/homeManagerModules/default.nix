@@ -142,17 +142,24 @@
               };
             };
           };
-          vscodium = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables vscodium";
-              };
-            };
-          };
           equibop = lib.mkOption {
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables equibop";
+              };
+            };
+          };
+          libreoffice-qt = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables libreoffice-qt";
+              };
+            };
+          };
+          vscodium = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables vscodium";
               };
             };
           };
@@ -219,6 +226,13 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables system";
+          dunst = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables home manager settings";
+              };
+            };
+          };
           hm-settings = lib.mkOption {
             type = lib.types.submodule {
               options = {

@@ -46,6 +46,7 @@
       enable = true;
       brave.enable = true;
       equibop.enable = true;
+      libreoffice-qt = true;
       vscodium.enable = true;
     };
     resources = {
@@ -58,6 +59,7 @@
     };
     system = {
       enable = true;
+      dunst.enable = true;
       hm-settings = {
         enable = true;
         username = "scorpio";
