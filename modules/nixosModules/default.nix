@@ -218,7 +218,6 @@
         config = lib.mkIf config.nixos-modules.system.enable { 
           boot.settings.systemd-boot-enabled = true;
           boot.settings.touchEfiVariables = true;
-          boot.settings.kernelPkgs = pkgs.linuxPackages_latest;
         };
       };
     };
