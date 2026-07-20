@@ -153,7 +153,7 @@
                       touchEfiVariables = lib.mkEnableOption "enables canTouchEfiVariables";
                       systemd-boot-config-limit = lib.mkOption {
                         type = lib.types.int;
-                        default = 20
+                        default = 20;
                       };
                       kernelPkgs = lib.mkOption {
                         type = lib.types.package;
