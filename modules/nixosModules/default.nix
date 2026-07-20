@@ -195,8 +195,8 @@
                   type = lib.types.str {
                     default = "NixOS";
                   };
-                  networkmanager.enable = lib.mkEnableOption "enables network manager";
                 };
+                networkmanager.enable = lib.mkEnableOption "enables network manager";
               };
             };
           };
