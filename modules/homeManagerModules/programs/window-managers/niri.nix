@@ -4,7 +4,7 @@ let
   inherit (inputs) niri-dotfiles-repo;
 in
 {
-  config = lib.mkIf config.hm-modules.window-managers.niri-configs.enable {
+  config = lib.mkIf config.hm-modules.window-managers.niri.enable {
     xdg.configFile.niri = {
       source = create_symlink "${niri-dotfiles-repo}/.config/niri";
       recursive = true;
