@@ -20,9 +20,6 @@
       url = "github:nix-community/home-manager/release-26.05";
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
-    gruvbox-wallpapers = {
-      url = "github:AngelJumbo/gruvbox-wallpapers";
-    };
     nixos-dotfiles-repo = {
       url = "github:ScorpioGameKing/nixos-dotfiles-repo/main";
       flake = false;

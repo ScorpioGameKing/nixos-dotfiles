@@ -25,10 +25,8 @@
 
   hm-modules = {
     enable = false;
-
     cli-apps = {
       enable = false;
-
       joshuto = false;
       lazygit.enable = false;
       neovim.enable = false;
@@ -36,60 +34,56 @@
       television.enable = false;
       yazi.enable = false;
     };
-    
     desktop = {
       enable = false;
-
-      mako = false;
+      dunst.enable = false;
+      hyprpaper.enable = false;
+      mako.enable = false;
       quickshell.enable = false;
       swaybg.enable = false;
       swaylock.enable = false;
       waybar.enable = false;
       waypaper.enable = false;
     };
-    
     gui-apps = {
       enable = false;
-
       brave.enable = false;
       equibop.enable = false;
       vscodium.enable = false;
     };
-    
     resources = {
       enable = false;
-
       gruvbox-wallpapers.enable = false;
     };
-    
     shells = {
       enable = false;
-
       bash.enable = false;
       nushell.enable = false;
     };
-
     system = {
       enable = false;
-
       hm-settings = {
         enable = false;
-
         username = "";
         homeDirectory = "";
       };
+      udiskie = {
+        enable = false;
+        settings = {
+          automount = false;
+          notify = false;
+        };
+      };
+      udisks2.enable = false;
     };
-    
     terminals = {
       enable = false;
-
       wezterm.enable = false;
+      kitty.enable = false;
       alacritty.enable = false;
     };
-    
     tools = {
       enable = false;
-
       eza.enable = false;
       fastfetch.enable = false;
       fuzzel.enable = false;
@@ -101,11 +95,10 @@
       update-nix-fetchgit = false;
       zoxide.enable = false;
     };
-    
     window-managers = {
       enable = false;
-
-      niri-configs.enable = false;
+      niri.enable = false;
+      hyprland.enable = false;
     }
   };
 }

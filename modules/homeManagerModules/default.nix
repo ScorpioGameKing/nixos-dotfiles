@@ -61,7 +61,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.cli-apps.enable { };
       };
       default = {};
     };
@@ -129,7 +128,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.desktop.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -161,7 +159,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.gui-apps.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -179,7 +176,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.resources.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -204,7 +200,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.shells.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -252,7 +247,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.system.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -284,7 +278,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.terminals.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -365,7 +358,6 @@
             };
           };
         };
-        config = lib.mkIf config.hm-modules.tools.enable { };
       };
     };
     # --------------------------------------------------------------------
@@ -380,7 +372,6 @@
               options = {
                 enable = lib.mkEnableOption "enables niri";
               };
-              #config = { enable = lib.mkIf osConfig.nixos-modules.window-managers.niri.enable true; };
             };
           };
           hyprland = lib.mkOption {
@@ -388,7 +379,6 @@
               options = {
                 enable = lib.mkEnableOption "enables hyprland";
               };
-              #config = { enable = lib.mkIf osConfig.nixos-modules.window-managers.hyprland.enable true; };
             };
           };
         };

@@ -58,6 +58,7 @@
 
     gui-apps = {
       enable = true;
+      libreoffice.enable = true;
       steam.enable = true;
     };
 
@@ -73,13 +74,14 @@
 
     system = {
       enable = true;
+      appimage = {
+        enable = true;
+      };
       boot = {
         enable = true;
         settings = {
           systemd-boot.enabled = true;
           canTouchEfiVariables = true;
-          systemd-boot.configurationLimit = 20;
-          kernelPackages = pkgs.linuxPackages_latest
         };
       };
       font = {
@@ -121,6 +123,10 @@
     window-managers = {
       enable = true;
       niri.enable = true;
+      hyprland = {
+        enable = false;
+        xwayland.enable = false;
+      };
     };
   };
 }

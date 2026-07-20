@@ -36,7 +36,6 @@
     };
     desktop = {
       enable = true;
-      hyprpaper.enable = true;
       mako.enable = true;
       quickshell.enable = true;
       swaybg.enable = true;
@@ -69,7 +68,7 @@
         enable = true;
         settings = {
           automount = true;
-          notify = false;
+          notify = true;
         };
       };
       udisks2.enable = true;
