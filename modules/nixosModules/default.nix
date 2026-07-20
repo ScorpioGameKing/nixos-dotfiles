@@ -352,7 +352,7 @@
       };
       nix-settings = {
         enable = true;
-      }
+      };
     };
   };
 }
