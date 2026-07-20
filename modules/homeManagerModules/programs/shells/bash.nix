@@ -1,8 +1,5 @@
 { pkgs, lib, config, ... }: {
   config = lib.mkIf config.hm-modules.shells.bash.enable {
-    home.packages = with pkgs; [
-      bash
-    ];
     programs.bash = {
       enable = true;
       shellAliases = {

@@ -1,8 +1,5 @@
 { pkgs, lib, config, ... }: {
   config = lib.mkIf config.hm-modules.shells.nushell.enable {
-    home.packages = with pkgs; [
-      nushell
-    ];
     home.shell.enableNushellIntegration = true;
     programs.bash = lib.mkIf config.hm-modules.shells.bash.enable {
       enable = true;

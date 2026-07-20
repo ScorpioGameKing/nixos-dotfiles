@@ -1,8 +1,5 @@
 { pkgs, lib, config, ...  }: {
   config = lib.mkIf config.hm-modules.tools.git.enable {
-    home.packages = with pkgs; [
-      git
-    ];
     programs.git = {
       enable = true;
       userName = "ScorpioGameKing";

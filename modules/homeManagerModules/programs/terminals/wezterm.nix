@@ -5,9 +5,6 @@ let
 in
 {
   config = lib.mkIf config.hm-modules.terminals.wezterm.enable {
-    home.packages = with pkgs; [
-      wezterm
-    ];
     programs.wezterm = {
       enable = true;
     };
