@@ -399,8 +399,8 @@
   # --------------------------------------------------------------------
   config = lib.mkIf config.hm-modules.enable { 
     hm-modules.window-managers = {
-      niri.enable = lib.mkIf osConfig.nixos-modules.window-managers.niri.enable true;
-      hyprland.enable = lib.mkIf osConfig.nixos-modules.window-managers.hyprland.enable true;
+      niri.enable = osConfig.nixos-modules.window-managers.niri.enable;
+      hyprland.enable = osConfig.nixos-modules.window-managers.hyprland.enable;
     };
   };
 }
