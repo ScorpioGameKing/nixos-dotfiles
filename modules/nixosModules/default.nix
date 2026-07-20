@@ -26,7 +26,7 @@
               options = {
                 enable = lib.mkEnableOption "enables nb-stylix";
                 base16Scheme = lib.mkOption {
-                  type = lib.types.path;
+                  type = lib.types.str;
                   default = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
                 };
                 autoEnable = lib.mkEnableOption "enables autoEnable";
