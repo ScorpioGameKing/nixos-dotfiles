@@ -375,12 +375,20 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables desktop";
-          niri-configs = lib.mkOption {
+          niri = lib.mkOption {
             type = lib.types.submodule {
               options = {
-                enable = lib.mkEnableOption "enables niri-configs";
+                enable = lib.mkEnableOption "enables niri";
               };
-              config = { enable = lib.mkIf osConfig.nixos-modules.window-managers.niri.enable true; };
+              #config = { enable = lib.mkIf osConfig.nixos-modules.window-managers.niri.enable true; };
+            };
+          };
+          hyprland = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables hyprland";
+              };
+              #config = { enable = lib.mkIf osConfig.nixos-modules.window-managers.hyprland.enable true; };
             };
           };
         };
@@ -389,5 +397,10 @@
     };
   };
   # --------------------------------------------------------------------
-  config = lib.mkIf config.hm-modules.enable { };
+  config = lib.mkIf config.hm-modules.enable { 
+    hm-modules.window-managers = {
+      niri.enable = lib.mkIf osConfig.nixos-modules.window-managers.niri.enable true;
+      hyprland.enable = lib.mkIf osConfig.nixos-modules.window-managers.hyprland.enable true;
+    }
+  };
 }
