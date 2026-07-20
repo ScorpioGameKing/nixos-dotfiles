@@ -2,13 +2,9 @@
   config = lib.mkIf config.hm-modules.terminals.kitty.enable {
     #home.packages = with pkgs; [
     #  kitty
-    #];
+    #u];
     programs.kitty = {
       enable = true;
-      font = {
-        name = "Agave Nerd Font Mono";
-        size = 13;
-      };
       shellIntegration = {
         enableBashIntegration = config.hm-modules.shells.bash.enable;
       };
