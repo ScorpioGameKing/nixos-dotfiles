@@ -26,7 +26,7 @@
   # Module Configuration
   # ---------------------------
 
-  enviroment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
       libreoffice
     ];
 
