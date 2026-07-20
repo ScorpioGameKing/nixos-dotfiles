@@ -26,6 +26,7 @@
 - Port more configs into native nix
 - More Resources (Possibly repack into smaller forked sources)
 - Enable Appimage support as module
+- add/refactor to BYOC&R (Bring your own Configs & Resources) sourcing from a known local location (option?)
 
 ## homeManagerModules
 
