@@ -79,6 +79,13 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables desktop";
+          dunst = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables home manager settings";
+              };
+            };
+          };
           mako = lib.mkOption {
             type = lib.types.submodule {
               options = {
@@ -226,13 +233,6 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables system";
-          dunst = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables home manager settings";
-              };
-            };
-          };
           hm-settings = lib.mkOption {
             type = lib.types.submodule {
               options = {

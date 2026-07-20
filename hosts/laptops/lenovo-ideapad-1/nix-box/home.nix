@@ -41,6 +41,7 @@
       swaylock.enable = true;
       waybar.enable = true;
       waypaper.enable = true;
+      mako.enable = true;
     };
     gui-apps = {
       enable = true;
@@ -59,7 +60,6 @@
     };
     system = {
       enable = true;
-      dunst.enable = true;
       hm-settings = {
         enable = true;
         username = "scorpio";
