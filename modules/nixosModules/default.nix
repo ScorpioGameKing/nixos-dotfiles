@@ -342,5 +342,7 @@
     };
   };
   # --------------------------------------------------------------------
-  config = lib.mkIf config.nixos-modules.enable { };
+  config = lib.mkIf config.nixos-modules.enable { 
+    system.enable = config.nixos-modules.enable;
+  };
 }
