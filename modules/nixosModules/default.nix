@@ -26,8 +26,8 @@
               options = {
                 enable = lib.mkEnableOption "enables nb-stylix";
                 base16Scheme = lib.mkOption {
-                  type = lib.types.str;
-                  default = "";
+                  type = lib.types.path;
+                  default = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
                 };
                 autoEnable = lib.mkEnableOption "enables autoEnable";
               };
@@ -216,8 +216,9 @@
           };
         };
         config = lib.mkIf config.nixos-modules.system.enable { 
-          systemd-boot-enabled = true;
-          touchEfiVariables = true;
+          boot.systemd-boot-enabled = true;
+          boot.touchEfiVariables = true;
+          boot.kernelPkgs = pkgs.linuxPackages_latest;
         };
       };
     };
