@@ -1,5 +1,4 @@
-{ pkgs, lib, config, inputs, ...  }: 
-{
+{ pkgs, lib, config, inputs, ...  }: {
   config = lib.mkIf config.hm-modules.cli-apps.joshuto.enable {
     programs.joshuto = {
       enable = true;

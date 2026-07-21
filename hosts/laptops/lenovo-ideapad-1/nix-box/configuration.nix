@@ -74,5 +74,9 @@
       enable = true;
       niri.enable = true;
     };
+
+    system = {
+      networking.hostName = "nix-box-lap-li-1";
+    };
   };
 }
