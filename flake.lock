@@ -164,16 +164,15 @@
       "locked": {
         "lastModified": 1784673473,
         "narHash": "sha256-npt0jKCVPYyRHcduql82SUzTK9D0MvlWmi62faHtVMk=",
-        "owner": "ScorpioGameKing",
-        "repo": "nixos-dotfiles-repo",
+        "ref": "refs/heads/main",
         "rev": "d814dad0a99cb3cc080bd3c92dcb1158931be06e",
-        "type": "github"
+        "revCount": 14,
+        "type": "git",
+        "url": "file:///home/scorpio/repos/dotfiles/nixos-dotfiles-repo"
       },
       "original": {
-        "owner": "ScorpioGameKing",
-        "ref": "main",
-        "repo": "nixos-dotfiles-repo",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/scorpio/repos/dotfiles/nixos-dotfiles-repo"
       }
     },
     "nixpkgs": {

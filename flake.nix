@@ -21,8 +21,8 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-dotfiles-repo = {
-      #url = "git+file:///home/scorpio/repos/dotfiles/nixos-dotfiles-repo";  # Use for local imports, faster updates and offline work
-      url = "github:ScorpioGameKing/nixos-dotfiles-repo/main"; # Use for first install, fetching remote updates and while online
+      url = "git+file:///home/scorpio/repos/dotfiles/nixos-dotfiles-repo";  # Use for local imports, faster updates and offline work
+      #url = "github:ScorpioGameKing/nixos-dotfiles-repo/main"; # Use for first install, fetching remote updates and while online
       flake = false;
     };
   };
