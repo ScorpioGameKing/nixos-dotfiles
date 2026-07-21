@@ -2,7 +2,7 @@
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   inherit (inputs) nixos-dotfiles-repo;
-  inherit (inputs) nvf
+  inherit (inputs) nvf;
 in
 {
   import = [ nvf.homeManagerModules.default ];
