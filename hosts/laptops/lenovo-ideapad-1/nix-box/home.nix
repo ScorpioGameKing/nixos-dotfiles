@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ inputs, ... }:
+{ config, ... }:
 
 {
 
@@ -26,6 +26,8 @@
 
   hm-modules = {
     enable = true;
+    useLocalRepo = true;
+    localRepoPath = "${config.home.homeDirectory}/repos/dotfiles/nixos-dotfiles/repo";
     cli-apps = {
       enable = true;
       lazygit.enable = true;
@@ -65,14 +67,6 @@
         username = "scorpio";
         homeDirectory = "/home/scorpio";
       };
-      udiskie = {
-        enable = true;
-        settings = {
-          automount = true;
-          notify = true;
-        };
-      };
-      udisks2.enable = true;
     };
     terminals = {
       enable = true;

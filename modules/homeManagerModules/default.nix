@@ -11,6 +11,11 @@
   ];
   options = {
     hm-modules.enable = lib.mkEnableOption "enables Home Manager Modules";
+    hm-modules.useLocalRepo = lib.mkEnableOption "enables the use of a local dotfile repoistory";
+    hm-modules.localRepoPath = lib.mkOption {
+      type = lib.types.str;
+      default = "";
+    };
     # --------------------------------------------------------------------
     # CLI-App Options
     # --------------------------------------------------------------------
