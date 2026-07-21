@@ -13,9 +13,10 @@
         
         # General Shorthands
         btw = "echo I use NixOS, btw";
-        ff = "clear ; fastfetch";
-        ls = "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
-        vi = "nvim";
+        ff = lib.mkIf config.hm-modules.tools.fastfetch.enable "clear ; fastfetch";
+        ls = lib.mkIf config.hm-modules.tools.eza.enable "eza -TF -L 1 -a -s type --icons=auto -lUmh --git-repos --no-permissions";
+        vi = lib.mkIf config.hm-modules.cli-apps.neovim.enable "nvim";
+        jo = lib.mkIf config.hm-modules.cli-apps.joshuto.enable "joshuto";
 
         # General NixOS Commands
         qnc = "nix-collect-garbage -d";
