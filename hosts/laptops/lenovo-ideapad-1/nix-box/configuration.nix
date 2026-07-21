@@ -32,6 +32,7 @@
     desktop = {
       enable = true;
       brightnessctl.enable = true;
+      playerctl.enable = true;
       nb-stylix = {
         enable = true;
         base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";

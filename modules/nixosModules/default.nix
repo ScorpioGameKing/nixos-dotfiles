@@ -18,6 +18,20 @@
       type = lib.types.submodule {
         options = {
           enable = lib.mkEnableOption "enables desktop";
+          brightnessctl = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables brightnessctl";
+              };
+            };
+          };
+          playerctl = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables playerctl";
+              };
+            };
+          };
           nb-stylix = lib.mkOption {
             type = lib.types.submodule {
               options = {
@@ -34,13 +48,6 @@
             type = lib.types.submodule {
               options = {
                 enable = lib.mkEnableOption "enables xwayland-satellite";
-              };
-            };
-          };
-          brightnessctl = lib.mkOption {
-            type = lib.types.submodule {
-              options = {
-                enable = lib.mkEnableOption "enables brightnessctl";
               };
             };
           };
