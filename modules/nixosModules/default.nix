@@ -37,6 +37,13 @@
               };
             };
           };
+          brightnessctl = lib.mkOption {
+            type = lib.types.submodule {
+              options = {
+                enable = lib.mkEnableOption "enables brightnessctl";
+              };
+            };
+          };
         };
       };
     };

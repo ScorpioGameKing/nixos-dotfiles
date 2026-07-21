@@ -30,19 +30,20 @@
     enable = true;
 
     desktop = {
-      enable = true;
+      enable = false;
+      brightnessctl.enable = false;
       nb-stylix = {
-        enable = true;
+        enable = false;
         base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-        autoEnable = true;
+        autoEnable = false;
       };
-      xwayland-satellite.enable = true;
+      xwayland-satellite.enable = false;
     };
 
     display-managers = {
-      enable = true;
+      enable = false;
       ly {
-        enable = true;
+        enable = false;
         animation = "colormix";
         cmatrix_min_codepoint = "0x3000";
         cmatrix_max_codepoint = "0x30FF";
@@ -57,25 +58,25 @@
     };
 
     gui-apps = {
-      enable = true;
-      libreoffice.enable = true;
-      steam.enable = true;
+      enable = false;
+      libreoffice.enable = false;
+      steam.enable = false;
     };
 
     tools = {
-      enable = true;
-      cmake.enable = true;
-      gcc.enable = true;
-      pinentry-all.enable = true;
-      ripgrep.enable = true;
-      tree-sitter.enable = true;
-      wget.enable = true;
+      enable = false;
+      cmake.enable = false;
+      gcc.enable = false;
+      pinentry-all.enable = false;
+      ripgrep.enable = false;
+      tree-sitter.enable = false;
+      wget.enable = false;
     };
 
     system = {
       enable = true;
       appimage = {
-        enable = true;
+        enable = false;
       };
       boot = {
         enable = true;
@@ -85,13 +86,13 @@
         };
       };
       font = {
-        enable = true;
+        enable = false;
       };
       hardware = {
-        enable = true;
+        enable = false;
         graphics = {
-          enable = true;
-          enable32Bit = true;
+          enable = false;
+          enable32Bit = false;
         };
       };
       networking = {
@@ -100,14 +101,14 @@
       };
       nix-settings = {
         enable = true;
-        allowUnfree = true;
+        allowUnfree = false;
       };
       security = {
         enable = true;
       };
       services = {
         enable = true;
-        printing.enable = true;
+        printing.enable = false;
         libinput.enable = true;
       };
       time = {
@@ -116,13 +117,13 @@
     };
 
     users = {
-      enable = true;
-      scorpio.enable = true;
+      enable = false;
+      scorpio.enable = false;
     };
 
     window-managers = {
-      enable = true;
-      niri.enable = true;
+      enable = false;
+      niri.enable = false;
       hyprland = {
         enable = false;
         xwayland.enable = false;
