@@ -37,6 +37,7 @@
     };
     desktop = {
       enable = true;
+      hyprpaper.enable = true;
       mako.enable = true;
       quickshell.enable = true;
       swaybg.enable = true;
