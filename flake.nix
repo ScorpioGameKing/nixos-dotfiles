@@ -12,7 +12,10 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
-    nvf.url = "github:notashelf/nvf";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +37,7 @@
   # Manager setup.
   # -------------------------
 
-  outputs = inputs @ { self, nixpkgs, stylix, home-manager, nvf, ... }: {
+  outputs = inputs @ { self, nixpkgs, stylix, home-manager, ... }: {
 
     # -------------------------
     # Nix-Box Flake: Niri based
@@ -45,7 +48,6 @@
 	    system = "x86_64-linux";
 	    modules = [
         stylix.nixosModules.stylix
-        nvf.homeManagerModules.default
 	      ./hosts/laptops/lenovo-ideapad-1/nix-box/configuration.nix
 		    home-manager.nixosModules.home-manager
 		    {

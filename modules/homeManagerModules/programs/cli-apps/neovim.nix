@@ -2,8 +2,10 @@
 let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   inherit (inputs) nixos-dotfiles-repo;
+  inherit (inputs) nvf
 in
 {
+  import = [ nvf.homeManagerModules.default ];
   config = lib.mkIf config.hm-modules.cli-apps.neovim.enable {
     home.packages = with pkgs; [
       neovim
