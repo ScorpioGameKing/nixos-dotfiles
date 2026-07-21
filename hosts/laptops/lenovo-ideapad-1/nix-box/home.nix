@@ -2,7 +2,7 @@
 # Scorpio's Nix-Box HM Config
 # ---------------------------
 
-{ ... }:
+{ inputs, ... }:
 
 {
 
@@ -17,6 +17,7 @@
   # ---------------------------
 
   imports = [
+    inputs.nvf.homeManagerModules.default
     ./../../../../modules/homeManagerModules/default.nix
   ];
 

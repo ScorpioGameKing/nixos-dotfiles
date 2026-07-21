@@ -4,7 +4,6 @@ let
   inherit (inputs) nixos-dotfiles-repo;
 in
 {
-  import = [ inputs.nvf.homeManagerModules.default ];
   config = lib.mkIf config.hm-modules.cli-apps.neovim.enable {
     home.packages = with pkgs; [
       neovim
