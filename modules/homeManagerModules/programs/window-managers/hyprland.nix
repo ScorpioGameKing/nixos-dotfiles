@@ -5,7 +5,7 @@ let
 in
 {
   config = lib.mkIf config.hm-modules.window-managers.hyprland.enable {
-    xdg.configFile.niri = {
+    xdg.configFile.hypr = {
       source = create_symlink "${nixos-dotfiles-repo}/.config/hypr";
       recursive = true;
     };

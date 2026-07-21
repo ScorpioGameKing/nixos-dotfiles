@@ -5,7 +5,7 @@ let
 in
 {
   config = lib.mkIf config.hm-modules.window-managers.niri.enable {
-    xdg.configFile.hypr = {
+    xdg.configFile.niri = {
       source = create_symlink "${nixos-dotfiles-repo}/.config/niri";
       recursive = true;
     };
