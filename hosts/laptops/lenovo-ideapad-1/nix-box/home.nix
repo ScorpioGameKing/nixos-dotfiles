@@ -17,7 +17,6 @@
   # ---------------------------
 
   imports = [
-    inputs.nvf.homeManagerModules.default
     ./../../../../modules/homeManagerModules/default.nix
   ];
 
