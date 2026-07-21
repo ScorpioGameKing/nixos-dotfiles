@@ -12,10 +12,6 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
