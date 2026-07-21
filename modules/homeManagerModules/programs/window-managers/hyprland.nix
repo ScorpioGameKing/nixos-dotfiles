@@ -9,10 +9,10 @@ in
       source = create_symlink "${nixos-dotfiles-repo}/.config/hypr";
       recursive = true;
     };
-    wayland.windowManager.hyprland = {
-      enable = true;
-      package = null;
-      portalPackage = null;
-    };
+    #wayland.windowManager.hyprland = {
+    #  enable = true;
+    #  package = null;
+    #  portalPackage = null;
+    #};
   };
 }
