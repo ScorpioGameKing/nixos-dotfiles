@@ -33,6 +33,7 @@
       oh-my-posh.enable = true;
       television.enable = true;
       yazi.enable = true;
+      joshuto.enable = true;
     };
     desktop = {
       enable = true;
