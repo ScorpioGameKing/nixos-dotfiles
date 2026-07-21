@@ -26,8 +26,6 @@
 
   hm-modules = {
     enable = true;
-    useLocalRepo = true;
-    localRepoPath = "${config.home.homeDirectory}/repos/dotfiles/nixos-dotfiles/repo";
     cli-apps = {
       enable = true;
       lazygit.enable = true;
