@@ -19,7 +19,7 @@ in
 
         # General NixOS Commands
         qnc = "nix-collect-garbage -d";
-        qnud = "nix flake update nixos-dotfiles-repo --flake ${current_host_flake}";
+        qnud = "nix flake update nixos-dotfiles-repo --flake ~/nixos-dotfiles";
         
         # Nix-Box Build Commands
         qnrb = "lg -p ~/nixos-dotfiles && sudo nixos-rebuild switch --flake ${current_host_flake}";
