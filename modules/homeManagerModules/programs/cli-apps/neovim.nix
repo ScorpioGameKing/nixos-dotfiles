@@ -15,7 +15,7 @@ in
 
     programs.nvf = {
       enable = true;
-      config = {
+      settings = {
         vim = {
           theme = {
             enable = true;
