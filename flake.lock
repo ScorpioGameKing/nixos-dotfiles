@@ -162,11 +162,11 @@
     "nixos-dotfiles-repo": {
       "flake": false,
       "locked": {
-        "lastModified": 1784648619,
-        "narHash": "sha256-lLhGHDxN6w28OKG1UJ0eBQFyVzXXdPUBDDybQI1ITwg=",
+        "lastModified": 1784648943,
+        "narHash": "sha256-DehsbywlKLnHqDOeuigaMtLFmemCJREU3Kt84fjaYsE=",
         "ref": "refs/heads/main",
-        "rev": "afd36a61d1d0da923ab2302a5d19b5bdd06f6194",
-        "revCount": 12,
+        "rev": "946e2c45b4107499b6648a0b040968b3f334d3a0",
+        "revCount": 13,
         "type": "git",
         "url": "file:///home/scorpio/repos/dotfiles/nixos-dotfiles-repo"
       },
