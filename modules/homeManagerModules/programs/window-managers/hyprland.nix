@@ -6,7 +6,7 @@ in
 {
   config = lib.mkIf config.hm-modules.window-managers.hyprland.enable {
     home.file.hypr = {
-      source = create_symlink "${nixos-dotfiles-repo}/.config/hypr/";
+      source = "${nixos-dotfiles-repo}/.config/hypr";
       recursive = true;
     };
     #wayland.windowManager.hyprland = {
